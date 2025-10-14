@@ -49,7 +49,7 @@ const ProjectCard: React.FC<{ index: number } & TProject & { onViewDetails: (pro
               initial={{ opacity: 0 }}
               animate={{ opacity: isHovered ? 1 : 0 }}
               transition={{ duration: 0.3 }}
-              className="absolute inset-0 z-10 bg-black bg-opacity-60 rounded-2xl flex items-center justify-center"
+              className="absolute inset-0 z-10 bg-black bg-opacity-60 rounded-2xl flex items-center justify-center group-hover:scale-105"
             >
               <div className="flex space-x-3">
                 {/* View Details Button */}
