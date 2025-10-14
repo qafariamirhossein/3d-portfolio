@@ -1,35 +1,34 @@
 {
   "portfolios": [
     {
-      "id": "3d-portfolio-website",
-      "name": "3D Portfolio Website",
-      "description": "An immersive 3D portfolio website built with React and Three.js, featuring interactive 3D models, smooth animations, and responsive design. Showcases projects and skills in a visually stunning way.",
-      "detailedDescription": "This project represents a cutting-edge approach to portfolio presentation, combining modern web technologies with 3D graphics to create an engaging user experience. The website features interactive 3D models, smooth animations, and a responsive design that works seamlessly across all devices. Built with React, Three.js, and TypeScript, it demonstrates advanced frontend development skills and creative problem-solving abilities.",
-      "shortDescription": "Immersive 3D portfolio with interactive models and animations",
-      "image": "/src/assets/carrent.png",
+      "id": "agentc-ai-assistant",
+      "name": "agentC - AI Learning Assistant",
+      "description": "An intelligent AI assistant designed to revolutionize online learning experiences. agentC provides personalized course recommendations, real-time learning support, and automated customer service for the BreakoutwithAI platform.",
+      "detailedDescription": "agentC represents the future of educational technology, combining advanced AI capabilities with user-friendly interfaces to create an unparalleled learning experience. Built with cutting-edge conversational AI, the assistant understands user queries in natural language and provides contextual, helpful responses. The system integrates seamlessly with the BreakoutwithAI platform, offering personalized course recommendations based on user behavior, skill level, and learning goals. With real-time response capabilities powered by OpenAI's API and LangChain, agentC ensures learners always have access to immediate support and guidance.",
+      "shortDescription": "Intelligent AI assistant for personalized learning experiences",
+      "image": "/portfolio/images/agentc1.png",
       "gallery": [
-        "/src/assets/carrent.png",
-        "/src/assets/jobit.png",
-        "/src/assets/tripguide.png"
+        "/portfolio/images/agentc1.png"
       ],
-      "video": "/src/assets/portfolio-demo.mp4",
-      "liveDemoLink": "https://amirqafari-portfolio.netlify.app",
-      "sourceCodeLink": "https://github.com/amirqafari/3d-portfolio",
+      "video": "/portfolio/videos/agentc1.mp4",
+      "liveDemoLink": "https://agentc-demo.breakoutwithai.com",
+      "sourceCodeLink": "https://github.com/amirqafari/agentc",
       "technologies": [
-        "React",
-        "Three.js",
+        "Next.js",
         "TypeScript",
-        "Framer Motion",
+        "OpenAI API",
+        "LangChain",
+        "React",
         "Tailwind CSS",
-        "Vite"
+        "Framer Motion"
       ],
       "tags": [
         {
-          "name": "react",
+          "name": "ai",
           "color": "blue-text-gradient"
         },
         {
-          "name": "threejs",
+          "name": "nextjs",
           "color": "green-text-gradient"
         },
         {
@@ -38,53 +37,58 @@
         }
       ],
       "features": [
-        "Interactive 3D models and animations",
-        "Responsive design for all devices",
-        "Smooth page transitions",
-        "Modern UI/UX design",
-        "Performance optimized",
-        "SEO friendly"
+        "Conversational AI guidance system",
+        "Intelligent course recommendation engine",
+        "Real-time chat-based learning support",
+        "Seamless platform integration",
+        "Natural language processing",
+        "Personalized learning paths",
+        "Multi-language support",
+        "Analytics and progress tracking"
       ],
       "challenges": [
-        "Optimizing 3D models for web performance",
-        "Creating smooth animations across different devices",
-        "Implementing responsive 3D elements"
+        "Implementing natural language understanding",
+        "Creating context-aware responses",
+        "Integrating with existing platform architecture",
+        "Ensuring real-time performance"
       ],
       "solutions": [
-        "Used LOD (Level of Detail) techniques for 3D models",
-        "Implemented efficient animation libraries",
-        "Created adaptive 3D rendering based on device capabilities"
+        "Leveraged OpenAI's advanced language models",
+        "Implemented LangChain for context management",
+        "Created modular integration architecture",
+        "Optimized API calls and caching strategies"
       ],
-      "duration": "3 months",
+      "duration": "2 months",
       "teamSize": "1",
-      "role": "Full Stack Developer",
-      "client": "Personal Project",
-      "year": "2024"
+      "role": "AI Engineer",
+      "client": "BreakoutwithAI",
+      "year": "2025"
     },
     {
-      "id": "ecommerce-platform",
-      "name": "E-Commerce Platform",
-      "description": "A full-stack e-commerce solution with 3D product visualization, real-time inventory management, and secure payment processing. Built with React, Node.js, and MongoDB.",
-      "detailedDescription": "This comprehensive e-commerce platform revolutionizes online shopping with 3D product visualization capabilities. The platform includes a complete admin dashboard, real-time inventory management, secure payment processing, and an intuitive user interface. Built with modern technologies including React, Node.js, MongoDB, and Three.js for 3D product showcases.",
-      "shortDescription": "Full-stack e-commerce with 3D product visualization",
-      "image": "/src/assets/jobit.png",
+      "id": "alavi-academy-platform",
+      "name": "Alavi Academy - Multilingual Learning Platform",
+      "description": "A comprehensive multilingual educational platform offering psychology courses and blogs in English, Dari, and German. Features modern UI, responsive design, and complete course management system.",
+      "detailedDescription": "Alavi Academy breaks down language barriers in education by providing a sophisticated multilingual learning platform. The platform serves students from diverse cultural backgrounds, offering psychology courses and educational content in three languages: English, دری (Dari), and Deutsch. Built with modern web technologies, it features a clean, intuitive interface that adapts seamlessly across devices. The platform includes comprehensive course management, student dashboards, progress tracking, and an integrated blog system for educational content. The multilingual architecture ensures consistent user experience across all supported languages while maintaining cultural sensitivity and accessibility.",
+      "shortDescription": "Multilingual psychology education platform with course management",
+      "image": "/portfolio/images/alavi-academy1.png",
       "gallery": [
-        "/src/assets/jobit.png",
-        "/src/assets/carrent.png",
-        "/src/assets/tripguide.png"
+        "/portfolio/images/alavi-academy1.png",
+        "/portfolio/images/alavi-academy2.png",
+        "/portfolio/images/alavi-academy3.png",
+        "/portfolio/images/alavi-academy4.png",
+        "/portfolio/images/alavi-academy5.png"
       ],
-      "video": "/src/assets/ecommerce-demo.mp4",
-      "liveDemoLink": "https://ecommerce-platform-demo.netlify.app",
-      "sourceCodeLink": "https://github.com/amirqafari/ecommerce-platform",
+      "video": "/portfolio/videos/alavi-academy1.mp4",
+      "liveDemoLink": "https://alavi-academy.com",
+      "sourceCodeLink": "https://github.com/amirqafari/alavi-academy",
       "technologies": [
+        "Vite.js",
         "React",
-        "Node.js",
-        "MongoDB",
-        "Express",
-        "Three.js",
-        "Stripe",
-        "JWT",
-        "Redux"
+        "Tailwind CSS",
+        "Firebase",
+        "TypeScript",
+        "Framer Motion",
+        "i18next"
       ],
       "tags": [
         {
@@ -92,67 +96,74 @@
           "color": "blue-text-gradient"
         },
         {
-          "name": "nodejs",
+          "name": "firebase",
           "color": "green-text-gradient"
         },
         {
-          "name": "mongodb",
+          "name": "multilingual",
           "color": "pink-text-gradient"
         }
       ],
       "features": [
-        "3D product visualization",
-        "Real-time inventory management",
-        "Secure payment processing",
-        "Admin dashboard",
-        "User authentication",
-        "Order tracking system",
-        "Product search and filtering",
-        "Responsive design"
+        "Multilingual support (English, Dari, German)",
+        "Comprehensive course catalog",
+        "Student enrollment and progress tracking",
+        "Educational blog system",
+        "Admin panel for content management",
+        "Responsive design for all devices",
+        "Fast page loads and optimization",
+        "User authentication and profiles"
       ],
       "challenges": [
-        "Implementing secure payment processing",
-        "Managing real-time inventory updates",
-        "Optimizing 3D product loading"
+        "Implementing robust multilingual architecture",
+        "Ensuring cultural sensitivity in translations",
+        "Optimizing performance across different languages",
+        "Creating intuitive course management system"
       ],
       "solutions": [
-        "Integrated Stripe for secure payments",
-        "Used WebSocket for real-time updates",
-        "Implemented lazy loading for 3D models"
+        "Used i18next for comprehensive internationalization",
+        "Collaborated with native speakers for accurate translations",
+        "Implemented lazy loading and code splitting",
+        "Created modular component architecture for easy management"
       ],
-      "duration": "6 months",
-      "teamSize": "3",
-      "role": "Lead Developer",
-      "client": "Tech Solutions Inc.",
-      "year": "2023"
+      "duration": "3 months",
+      "teamSize": "1",
+      "role": "Fullstack Developer",
+      "client": "Alavi Academy",
+      "year": "2025"
     },
     {
-      "id": "interactive-3d-dashboard",
-      "name": "Interactive 3D Dashboard",
-      "description": "A data visualization dashboard featuring interactive 3D charts and real-time analytics. Built with React Three Fiber, D3.js, and WebGL for high-performance rendering.",
-      "detailedDescription": "This innovative dashboard transforms complex data into interactive 3D visualizations, making it easier for users to understand trends and patterns. The dashboard features real-time data updates, customizable charts, and immersive 3D environments. Built with cutting-edge technologies including React Three Fiber, D3.js, and WebGL for optimal performance.",
-      "shortDescription": "Interactive 3D data visualization dashboard",
-      "image": "/src/assets/tripguide.png",
+      "id": "animercial-3d-portfolio",
+      "name": "Animercial - 3D Interactive Portfolio",
+      "description": "A visually stunning 3D interactive web experience designed for creative agencies and marketing showcases. Combines storytelling with motion design using Three.js for immersive user experiences.",
+      "detailedDescription": "Animercial represents the pinnacle of creative web development, merging cinematic storytelling with interactive 3D technology. This project showcases how modern web technologies can create truly immersive experiences that captivate audiences and leave lasting impressions. Built with Three.js and React Three Fiber, the platform features real-time 3D animations, interactive portfolio navigation, and embedded video content. The project demonstrates advanced skills in 3D web development, performance optimization, and creative problem-solving. Each interaction is carefully crafted to provide smooth, engaging user experiences while maintaining high performance across different devices and browsers.",
+      "shortDescription": "Cinematic 3D interactive portfolio for creative agencies",
+      "image": "/portfolio/images/animercial-1.png",
       "gallery": [
-        "/src/assets/tripguide.png",
-        "/src/assets/carrent.png",
-        "/src/assets/jobit.png"
+        "/portfolio/images/animercial-1.png",
+        "/portfolio/images/animercial-2.png",
+        "/portfolio/images/animercial-3.png",
+        "/portfolio/images/animercial-4.png",
+        "/portfolio/images/animercial-5.png",
+        "/portfolio/images/animercial-6.png",
+        "/portfolio/images/animercial-7.png",
+        "/portfolio/images/animercial-8.png"
       ],
-      "video": "/src/assets/dashboard-demo.mp4",
-      "liveDemoLink": "https://3d-dashboard-demo.netlify.app",
-      "sourceCodeLink": "https://github.com/amirqafari/3d-dashboard",
+      "video": "/portfolio/videos/animercial-demo.mp4",
+      "liveDemoLink": "https://animercial-demo.com",
+      "sourceCodeLink": "https://github.com/amirqafari/animercial",
       "technologies": [
-        "React",
+        "Next.js",
         "Three.js",
-        "D3.js",
-        "WebGL",
         "React Three Fiber",
+        "GSAP",
         "TypeScript",
-        "WebSocket"
+        "Tailwind CSS",
+        "WebGL"
       ],
       "tags": [
         {
-          "name": "react",
+          "name": "threejs",
           "color": "blue-text-gradient"
         },
         {
@@ -160,34 +171,589 @@
           "color": "green-text-gradient"
         },
         {
-          "name": "d3js",
+          "name": "animation",
           "color": "pink-text-gradient"
         }
       ],
       "features": [
-        "Interactive 3D charts and graphs",
-        "Real-time data visualization",
-        "Customizable dashboard layouts",
+        "Real-time 3D animations and interactions",
+        "Interactive portfolio navigation system",
+        "Embedded video and motion graphics",
         "High-performance WebGL rendering",
-        "Data export capabilities",
-        "Responsive design",
-        "Dark/light theme support"
+        "Client branding customization",
+        "Responsive 3D design",
+        "Smooth page transitions",
+        "Mobile-optimized 3D experiences"
       ],
       "challenges": [
-        "Optimizing WebGL performance for large datasets",
-        "Creating intuitive 3D interactions",
-        "Managing real-time data updates"
+        "Optimizing 3D performance for web browsers",
+        "Creating smooth animations across devices",
+        "Implementing complex 3D interactions",
+        "Ensuring cross-browser compatibility"
       ],
       "solutions": [
-        "Implemented efficient rendering techniques",
-        "Created user-friendly interaction patterns",
-        "Used WebSocket for real-time data streaming"
+        "Implemented efficient rendering techniques and LOD systems",
+        "Used GSAP for optimized animations",
+        "Created reusable 3D component library",
+        "Extensive testing across different browsers and devices"
+      ],
+      "duration": "2 months",
+      "teamSize": "1",
+      "role": "3D Frontend Developer",
+      "client": "Creative Agency",
+      "year": "2025"
+    },
+    {
+      "id": "breakoutwithai-platform",
+      "name": "BreakoutwithAI - AI Education Platform",
+      "description": "A high-conversion AI education platform designed to sell AI courses and workshops. Features SEO optimization, modern UI design, and integrated AI assistance for enhanced learning experiences.",
+      "detailedDescription": "BreakoutwithAI represents a comprehensive approach to online education, specifically targeting the growing AI learning market. The platform combines conversion-focused design with educational excellence, creating an environment where learners can discover, purchase, and engage with AI courses effectively. Built with Next.js and optimized for SEO, the platform ensures maximum visibility and organic traffic growth. The integration with agentC provides users with intelligent assistance throughout their learning journey, while the modern, responsive design ensures accessibility across all devices. The platform's architecture supports scalable growth and easy content management for course creators.",
+      "shortDescription": "High-conversion AI education platform with integrated learning assistant",
+      "image": "/portfolio/images/breakout-with-ai1.png",
+      "gallery": [
+        "/portfolio/images/breakout-with-ai1.png",
+        "/portfolio/images/breakout-with-ai2.png",
+        "/portfolio/images/breakout-with-ai3.png",
+        "/portfolio/images/breakout-with-ai4.png",
+        "/portfolio/images/breakout-with-ai5.png"
+      ],
+      "video": "/portfolio/videos/breakout-with-ai1.mp4",
+      "liveDemoLink": "https://breakoutwithai.com",
+      "sourceCodeLink": "https://github.com/amirqafari/breakoutwithai",
+      "technologies": [
+        "Next.js",
+        "Tailwind CSS",
+        "Stripe",
+        "OpenAI API",
+        "Framer Motion",
+        "TypeScript",
+        "React Query"
+      ],
+      "tags": [
+        {
+          "name": "nextjs",
+          "color": "blue-text-gradient"
+        },
+        {
+          "name": "seo",
+          "color": "green-text-gradient"
+        },
+        {
+          "name": "ai",
+          "color": "pink-text-gradient"
+        }
+      ],
+      "features": [
+        "SEO-optimized pages for maximum visibility",
+        "Integrated course catalog and checkout system",
+        "Clean, modern user interface design",
+        "Multi-device responsive layout",
+        "AI-powered learning assistance (agentC integration)",
+        "Payment processing with Stripe",
+        "Course progress tracking",
+        "User authentication and profiles"
+      ],
+      "challenges": [
+        "Optimizing for search engine visibility",
+        "Creating high-conversion user flows",
+        "Integrating complex payment systems",
+        "Ensuring mobile responsiveness"
+      ],
+      "solutions": [
+        "Implemented comprehensive SEO strategy with meta tags and structured data",
+        "Used conversion optimization techniques and A/B testing",
+        "Integrated Stripe for secure payment processing",
+        "Created mobile-first responsive design approach"
+      ],
+      "duration": "3 months",
+      "teamSize": "1",
+      "role": "Fullstack Developer",
+      "client": "BreakoutwithAI",
+      "year": "2025"
+    },
+    {
+      "id": "eurocup-sports-bet",
+      "name": "Eurocup Sports Bet - Decentralized Betting",
+      "description": "A revolutionary decentralized sports betting platform powered by tokenized betting on Euro Cup matches. Combines blockchain technology with intuitive web interface for secure, transparent betting experiences.",
+      "detailedDescription": "Eurocup Sports Bet represents the future of sports betting, leveraging blockchain technology to create a transparent, secure, and engaging platform for sports enthusiasts. The platform allows users to trade and purchase custom tokens to bet on their favorite Euro Cup teams, providing a unique combination of cryptocurrency trading and sports betting. Built with Next.js and integrated with Ethereum smart contracts, the platform ensures all transactions are transparent and secure. The intuitive interface makes it easy for users to track live odds, manage their betting portfolio, and participate in the community leaderboard. The decentralized nature of the platform eliminates traditional betting limitations while providing enhanced security and transparency.",
+      "shortDescription": "Decentralized sports betting platform with tokenized betting system",
+      "image": "/portfolio/images/eurocup-sports-bet-1.png",
+      "gallery": [
+        "/portfolio/images/eurocup-sports-bet-1.png",
+        "/portfolio/images/eurocup-sports-bet-2.png",
+        "/portfolio/images/eurocup-sports-bet-3.png",
+        "/portfolio/images/eurocup-sports-bet-4.png"
+      ],
+      "video": "/portfolio/videos/eurocup-demo.mp4",
+      "liveDemoLink": "https://eurocup-bet-demo.com",
+      "sourceCodeLink": "https://github.com/amirqafari/eurocup-sports-bet",
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "Solidity",
+        "Ethers.js",
+        "Tailwind CSS",
+        "Alchemy",
+        "Web3.js"
+      ],
+      "tags": [
+        {
+          "name": "blockchain",
+          "color": "blue-text-gradient"
+        },
+        {
+          "name": "solidity",
+          "color": "green-text-gradient"
+        },
+        {
+          "name": "web3",
+          "color": "pink-text-gradient"
+        }
+      ],
+      "features": [
+        "Token-based betting system",
+        "Real-time Euro Cup match tracking",
+        "Secure wallet integration",
+        "Live odds and leaderboard",
+        "Portfolio and betting dashboard",
+        "Smart contract integration",
+        "Transparent transaction history",
+        "Mobile-responsive design"
+      ],
+      "challenges": [
+        "Implementing secure smart contracts",
+        "Creating real-time data feeds",
+        "Ensuring wallet security",
+        "Managing gas fees and transactions"
+      ],
+      "solutions": [
+        "Developed audited smart contracts with security best practices",
+        "Integrated Alchemy for reliable blockchain data",
+        "Implemented secure wallet connection protocols",
+        "Optimized gas usage and transaction costs"
+      ],
+      "duration": "3 months",
+      "teamSize": "2",
+      "role": "Lead Developer",
+      "client": "Sports Betting Corp",
+      "year": "2025"
+    },
+    {
+      "id": "apegun-3d-marketing",
+      "name": "ApeGun - 3D Token Marketing Experience",
+      "description": "A visually stunning 3D interactive web experience built to market Ape Token within the Ethereum ecosystem. Combines immersive 3D environments with blockchain integration for engaging marketing campaigns.",
+      "detailedDescription": "ApeGun represents the cutting edge of crypto marketing, creating an unforgettable 3D interactive experience that showcases the Ape Token within the Ethereum ecosystem. This project demonstrates how modern web technologies can be used to create engaging marketing experiences that go beyond traditional advertising. The platform features immersive 3D environments, real-time token analytics, integrated wallet functionality, and stunning animations that captivate users and drive engagement. Built with Three.js and WebGL, the experience runs smoothly across different devices while maintaining high visual quality. The integration with Ethereum provides real-time token data and seamless wallet connections, creating a comprehensive marketing and trading experience.",
+      "shortDescription": "Immersive 3D marketing experience for Ape Token on Ethereum",
+      "image": "/portfolio/images/ape-1.png",
+      "gallery": [
+        "/portfolio/images/ape-1.png",
+        "/portfolio/images/ape-2.png",
+        "/portfolio/images/ape-3.png",
+        "/portfolio/images/ape-4.png",
+        "/portfolio/images/ape-5.png"
+      ],
+      "video": "/portfolio/videos/apegun-demo.mp4",
+      "liveDemoLink": "https://apegun-demo.com",
+      "sourceCodeLink": "https://github.com/amirqafari/apegun",
+      "technologies": [
+        "Next.js",
+        "Three.js",
+        "Tailwind CSS",
+        "Ethereum",
+        "Framer Motion",
+        "WebGL",
+        "Ethers.js"
+      ],
+      "tags": [
+        {
+          "name": "threejs",
+          "color": "blue-text-gradient"
+        },
+        {
+          "name": "ethereum",
+          "color": "green-text-gradient"
+        },
+        {
+          "name": "webgl",
+          "color": "pink-text-gradient"
+        }
+      ],
+      "features": [
+        "3D interactive interface using WebGL",
+        "Real-time token analytics and live data",
+        "Integrated wallet and buy interface",
+        "Immersive marketing animations",
+        "Blockchain data visualization",
+        "Responsive 3D design",
+        "Smooth performance optimization",
+        "Mobile-optimized 3D experience"
+      ],
+      "challenges": [
+        "Optimizing 3D performance for web",
+        "Integrating real-time blockchain data",
+        "Creating engaging marketing content",
+        "Ensuring cross-device compatibility"
+      ],
+      "solutions": [
+        "Implemented efficient 3D rendering techniques",
+        "Used WebSocket connections for real-time data",
+        "Created modular animation system",
+        "Extensive testing across devices and browsers"
+      ],
+      "duration": "3 months",
+      "teamSize": "1",
+      "role": "3D Web Developer",
+      "client": "Ape Token Community",
+      "year": "2025"
+    },
+    {
+      "id": "breakout-fashion-ai",
+      "name": "Breakout Fashion - AI Virtual Try-On",
+      "description": "Revolutionary AI-powered virtual try-on platform that allows users to visualize different outfits using computer vision and generative AI. Enables realistic clothing simulation for e-commerce and virtual worlds.",
+      "detailedDescription": "Breakout Fashion represents the future of online shopping and virtual fashion, combining cutting-edge AI technology with intuitive user interfaces to create realistic virtual try-on experiences. The platform allows users to upload photos or 3D character models and instantly visualize how different outfits would look on them. Using advanced computer vision and generative AI, the system provides realistic cloth simulation and accurate fitting, enabling users to make confident purchasing decisions. The platform is designed for both individual consumers and e-commerce businesses, offering seamless integration with existing online stores. The technology behind Breakout Fashion pushes the boundaries of what's possible in virtual fashion, creating experiences that are both practical and engaging.",
+      "shortDescription": "AI-powered virtual try-on platform with realistic clothing simulation",
+      "image": "/portfolio/images/marketing-ava-1.png",
+      "gallery": [
+        "/portfolio/images/marketing-ava-1.png",
+        "/portfolio/images/marketing-ava-2.png",
+        "/portfolio/images/marketing-ava-3.png"
+      ],
+      "video": "/portfolio/videos/breakout-fashion-demo.mp4",
+      "liveDemoLink": "https://breakout-fashion-demo.com",
+      "sourceCodeLink": "https://github.com/amirqafari/breakout-fashion",
+      "technologies": [
+        "Next.js",
+        "TensorFlow.js",
+        "OpenAI",
+        "Tailwind CSS",
+        "FastAPI",
+        "Python",
+        "OpenCV"
+      ],
+      "tags": [
+        {
+          "name": "ai",
+          "color": "blue-text-gradient"
+        },
+        {
+          "name": "tensorflow",
+          "color": "green-text-gradient"
+        },
+        {
+          "name": "computer-vision",
+          "color": "pink-text-gradient"
+        }
+      ],
+      "features": [
+        "AI-powered outfit try-on system",
+        "User upload interface for images and 3D avatars",
+        "Virtual wardrobe and outfit generator",
+        "Realistic cloth simulation technology",
+        "E-commerce integration capabilities",
+        "Real-time processing and visualization",
+        "Multiple clothing categories and styles",
+        "Mobile-optimized interface"
+      ],
+      "challenges": [
+        "Implementing accurate body detection and fitting",
+        "Creating realistic cloth simulation",
+        "Optimizing AI model performance",
+        "Handling various image formats and qualities"
+      ],
+      "solutions": [
+        "Used advanced computer vision algorithms for body detection",
+        "Implemented machine learning models for cloth simulation",
+        "Optimized TensorFlow.js for browser performance",
+        "Created robust image preprocessing pipeline"
+      ],
+      "duration": "3 months",
+      "teamSize": "2",
+      "role": "AI Developer",
+      "client": "Fashion Tech Inc.",
+      "year": "2025"
+    },
+    {
+      "id": "ai-nft-generator",
+      "name": "AI NFT Generator - Creative Art Platform",
+      "description": "An innovative AI-powered platform for generating unique NFT artwork using advanced machine learning models. Features both dark and light themes with comprehensive gallery management and minting capabilities.",
+      "detailedDescription": "The AI NFT Generator represents the intersection of artificial intelligence and digital art, providing users with powerful tools to create unique, AI-generated artwork that can be minted as NFTs. The platform leverages cutting-edge machine learning models to generate diverse artistic styles, from abstract compositions to photorealistic images. Users can customize generation parameters, explore different artistic styles, and create collections of unique artwork. The platform includes comprehensive gallery management, allowing users to organize, edit, and prepare their creations for NFT minting. With both dark and light themes, the interface adapts to user preferences while maintaining optimal usability and visual appeal.",
+      "shortDescription": "AI-powered NFT art generation platform with gallery management",
+      "image": "/portfolio/images/ai-nft-generator-dark-1.png",
+      "gallery": [
+        "/portfolio/images/ai-nft-generator-dark-1.png",
+        "/portfolio/images/ai-nft-generator-dark-2.png",
+        "/portfolio/images/ai-nft-generator-dark-3.png",
+        "/portfolio/images/ai-nft-generator-light-1.png",
+        "/portfolio/images/ai-nft-generator-light-2.png",
+        "/portfolio/images/ai-nft-generator-light-3.png"
+      ],
+      "video": "/portfolio/videos/ai-nft-generator-demo.mp4",
+      "liveDemoLink": "https://ai-nft-generator-demo.com",
+      "sourceCodeLink": "https://github.com/amirqafari/ai-nft-generator",
+      "technologies": [
+        "Next.js",
+        "TensorFlow.js",
+        "OpenAI DALL-E",
+        "Tailwind CSS",
+        "Web3.js",
+        "IPFS",
+        "TypeScript"
+      ],
+      "tags": [
+        {
+          "name": "ai",
+          "color": "blue-text-gradient"
+        },
+        {
+          "name": "nft",
+          "color": "green-text-gradient"
+        },
+        {
+          "name": "web3",
+          "color": "pink-text-gradient"
+        }
+      ],
+      "features": [
+        "AI-powered artwork generation",
+        "Multiple artistic styles and themes",
+        "Dark and light theme support",
+        "Gallery management system",
+        "NFT minting capabilities",
+        "IPFS integration for decentralized storage",
+        "Custom generation parameters",
+        "High-resolution export options"
+      ],
+      "challenges": [
+        "Integrating complex AI models for art generation",
+        "Optimizing image processing performance",
+        "Implementing secure NFT minting",
+        "Managing large image galleries efficiently"
+      ],
+      "solutions": [
+        "Used OpenAI's DALL-E API for high-quality generation",
+        "Implemented efficient image processing and caching",
+        "Integrated Web3.js for secure blockchain interactions",
+        "Created optimized gallery with lazy loading"
       ],
       "duration": "4 months",
+      "teamSize": "1",
+      "role": "AI Developer",
+      "client": "NFT Art Collective",
+      "year": "2025"
+    },
+    {
+      "id": "buy-bot-automation",
+      "name": "Buy Bot - Automated Trading System",
+      "description": "An advanced automated trading bot designed for cryptocurrency markets. Features intelligent market analysis, risk management, and real-time trading execution with comprehensive dashboard monitoring.",
+      "detailedDescription": "Buy Bot represents a sophisticated approach to automated cryptocurrency trading, combining advanced market analysis algorithms with intelligent risk management systems. The platform monitors multiple cryptocurrency exchanges in real-time, analyzing market trends, volume patterns, and price movements to execute profitable trades automatically. The system includes comprehensive risk management features, position sizing algorithms, and stop-loss mechanisms to protect investments. The intuitive dashboard provides real-time monitoring of trading performance, portfolio status, and market conditions. Built with security and reliability in mind, the bot operates 24/7 with minimal human intervention while maintaining strict adherence to predefined trading strategies and risk parameters.",
+      "shortDescription": "Intelligent automated cryptocurrency trading bot with risk management",
+      "image": "/portfolio/images/buy-bot-1.png",
+      "gallery": [
+        "/portfolio/images/buy-bot-1.png",
+        "/portfolio/images/buy-bot-2.png",
+        "/portfolio/images/buy-bot-3.png",
+        "/portfolio/images/buy-bot-4.png",
+        "/portfolio/images/buy-bot-5.png",
+        "/portfolio/images/buy-bot-6.png"
+      ],
+      "video": "/portfolio/videos/buy-bot-demo.mp4",
+      "liveDemoLink": "https://buy-bot-demo.com",
+      "sourceCodeLink": "https://github.com/amirqafari/buy-bot",
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "React",
+        "WebSocket",
+        "Pandas",
+        "NumPy",
+        "ccxt",
+        "PostgreSQL"
+      ],
+      "tags": [
+        {
+          "name": "python",
+          "color": "blue-text-gradient"
+        },
+        {
+          "name": "trading",
+          "color": "green-text-gradient"
+        },
+        {
+          "name": "automation",
+          "color": "pink-text-gradient"
+        }
+      ],
+      "features": [
+        "Real-time market analysis and monitoring",
+        "Intelligent trading strategy execution",
+        "Comprehensive risk management system",
+        "Multi-exchange support and integration",
+        "Real-time dashboard and monitoring",
+        "Portfolio tracking and performance analytics",
+        "Automated position sizing",
+        "Advanced backtesting capabilities"
+      ],
+      "challenges": [
+        "Implementing reliable market analysis algorithms",
+        "Ensuring secure API integrations",
+        "Managing real-time data processing",
+        "Creating effective risk management systems"
+      ],
+      "solutions": [
+        "Developed custom technical analysis algorithms",
+        "Implemented secure API key management",
+        "Used WebSocket connections for real-time data",
+        "Created comprehensive risk assessment models"
+      ],
+      "duration": "5 months",
       "teamSize": "2",
-      "role": "Frontend Developer",
-      "client": "Data Analytics Corp",
-      "year": "2023"
+      "role": "Lead Developer",
+      "client": "Trading Solutions Inc.",
+      "year": "2024"
+    },
+    {
+      "id": "twitter-data-collection",
+      "name": "Twitter Data Collection - Social Media Analytics",
+      "description": "A comprehensive social media analytics platform that collects, processes, and analyzes Twitter data for insights and trends. Features real-time data streaming, sentiment analysis, and interactive visualizations.",
+      "detailedDescription": "The Twitter Data Collection platform represents a powerful tool for social media analytics and research, providing comprehensive data collection and analysis capabilities for Twitter content. The platform streams real-time data from Twitter's API, processes and analyzes tweets for sentiment, trends, and engagement metrics. Users can create custom queries, set up automated data collection schedules, and generate detailed reports and visualizations. The system includes advanced filtering options, sentiment analysis using natural language processing, and interactive dashboards for data exploration. Built for researchers, marketers, and analysts, the platform provides valuable insights into social media trends and public opinion.",
+      "shortDescription": "Comprehensive Twitter analytics platform with sentiment analysis",
+      "image": "/portfolio/images/twitter-data-collection1.png",
+      "gallery": [
+        "/portfolio/images/twitter-data-collection1.png",
+        "/portfolio/images/twitter-data-collection2.png",
+        "/portfolio/images/twitter-data-collection3.png",
+        "/portfolio/images/twitter-data-collection4.png",
+        "/portfolio/images/twitter-data-collection5.png",
+        "/portfolio/images/twitter-data-collection6.png"
+      ],
+      "video": "/portfolio/videos/twitter-analytics-demo.mp4",
+      "liveDemoLink": "https://twitter-analytics-demo.com",
+      "sourceCodeLink": "https://github.com/amirqafari/twitter-data-collection",
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "React",
+        "MongoDB",
+        "Apache Kafka",
+        "Elasticsearch",
+        "D3.js",
+        "Docker"
+      ],
+      "tags": [
+        {
+          "name": "python",
+          "color": "blue-text-gradient"
+        },
+        {
+          "name": "analytics",
+          "color": "green-text-gradient"
+        },
+        {
+          "name": "social-media",
+          "color": "pink-text-gradient"
+        }
+      ],
+      "features": [
+        "Real-time Twitter data streaming",
+        "Advanced sentiment analysis",
+        "Interactive data visualizations",
+        "Custom query builder",
+        "Automated data collection schedules",
+        "Trend analysis and reporting",
+        "User engagement metrics",
+        "Export capabilities for research"
+      ],
+      "challenges": [
+        "Handling high-volume real-time data streams",
+        "Implementing accurate sentiment analysis",
+        "Creating efficient data storage and retrieval",
+        "Ensuring API rate limit compliance"
+      ],
+      "solutions": [
+        "Used Apache Kafka for scalable data streaming",
+        "Implemented machine learning models for sentiment analysis",
+        "Created optimized MongoDB schemas for fast queries",
+        "Developed intelligent rate limiting and queuing systems"
+      ],
+      "duration": "4 months",
+      "teamSize": "3",
+      "role": "Data Engineer",
+      "client": "Social Media Research Lab",
+      "year": "2024"
+    },
+    {
+      "id": "dev-discuss-community",
+      "name": "Dev Discuss - Developer Community Platform",
+      "description": "A comprehensive developer community platform featuring discussion forums, code sharing, and collaboration tools. Built with modern web technologies to foster knowledge sharing and professional networking.",
+      "detailedDescription": "Dev Discuss represents a modern approach to developer community building, creating a comprehensive platform where developers can share knowledge, collaborate on projects, and build professional networks. The platform features discussion forums organized by technology stacks, code sharing capabilities with syntax highlighting, and project collaboration tools. Users can create profiles, showcase their work, and connect with other developers worldwide. The platform includes advanced search functionality, tagging systems, and reputation scoring to help users find relevant content and contributors. Built with scalability in mind, the platform handles thousands of concurrent users while maintaining fast response times and reliable performance.",
+      "shortDescription": "Modern developer community platform with forums and collaboration tools",
+      "image": "/portfolio/images/dev-discuss-1.jpg",
+      "gallery": [
+        "/portfolio/images/dev-discuss-1.jpg",
+        "/portfolio/images/dev-discuss-2.jpg",
+        "/portfolio/images/dev-discuss-3.jpg",
+        "/portfolio/images/dev-discuss-4.jpg",
+        "/portfolio/images/dev-discuss-5.jpg",
+        "/portfolio/images/dev-discuss-6.jpg",
+        "/portfolio/images/dev-discuss-7.jpg",
+        "/portfolio/images/dev-discuss-8.jpg",
+        "/portfolio/images/dev-discuss-9.jpg",
+        "/portfolio/images/dev-discuss-10.jpg"
+      ],
+      "video": "/portfolio/videos/dev-discuss-demo.mp4",
+      "liveDemoLink": "https://devdiscuss.com",
+      "sourceCodeLink": "https://github.com/amirqafari/dev-discuss",
+      "technologies": [
+        "Next.js",
+        "Node.js",
+        "PostgreSQL",
+        "Redis",
+        "Socket.io",
+        "Prisma",
+        "Tailwind CSS",
+        "TypeScript"
+      ],
+      "tags": [
+        {
+          "name": "nextjs",
+          "color": "blue-text-gradient"
+        },
+        {
+          "name": "community",
+          "color": "green-text-gradient"
+        },
+        {
+          "name": "collaboration",
+          "color": "pink-text-gradient"
+        }
+      ],
+      "features": [
+        "Discussion forums and threads",
+        "Code sharing with syntax highlighting",
+        "User profiles and portfolios",
+        "Real-time messaging and notifications",
+        "Advanced search and filtering",
+        "Reputation and scoring system",
+        "Project collaboration tools",
+        "Mobile-responsive design"
+      ],
+      "challenges": [
+        "Building scalable forum architecture",
+        "Implementing real-time features",
+        "Creating effective search functionality",
+        "Managing user-generated content"
+      ],
+      "solutions": [
+        "Designed microservices architecture for scalability",
+        "Used Socket.io for real-time communication",
+        "Implemented Elasticsearch for advanced search",
+        "Created comprehensive content moderation system"
+      ],
+      "duration": "6 months",
+      "teamSize": "4",
+      "role": "Full Stack Developer",
+      "client": "Developer Community",
+      "year": "2024"
     }
   ]
 }

@@ -1,0 +1,26 @@
+### 👗 Project: **Breakout Fashion**
+
+🧩 **Subject:**
+AI-powered virtual try-on platform.
+
+📄 **Description:**
+Breakout Fashion allows users to upload a photo or 3D character model and visualize different outfits using AI. It blends computer vision and generative AI to simulate realistic clothing fitting in real time, enabling digital fashion experiences for e-commerce and virtual worlds.
+
+🔧 **Features:**
+
+* AI-powered outfit try-on system
+* User upload interface (images/3D avatars)
+* Virtual wardrobe and outfit generator
+* Realistic cloth simulation
+* E-commerce-ready product linking
+
+🧑‍💻 **Role:**
+AI Developer – Built the try-on model integration and frontend interface.
+
+🧪 **Stack:**
+Next.js · TensorFlow.js · OpenAI · Tailwind CSS · FastAPI
+
+📆 **Duration:**
+August – October 2025
+
+---

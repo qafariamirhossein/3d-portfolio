@@ -1,0 +1,26 @@
+### 🟨 Project: **Eurocup Sports Bet**
+
+🧩 **Subject:**
+Next.js-based sports betting app powered by tokenized betting.
+
+📄 **Description:**
+Eurocup Sports Bet is a decentralized betting platform where users can trade or buy custom tokens to bet on their favorite Euro Cup teams. It combines blockchain transparency with a sleek, intuitive web interface for sports enthusiasts.
+
+🔧 **Features:**
+
+* Token-based betting system
+* Real-time Euro Cup match tracking
+* Wallet integration for secure transactions
+* Live odds and leaderboard
+* Responsive dashboard for portfolio and bets
+
+🧑‍💻 **Role:**
+Lead Developer – Built smart contract integration and UI logic for betting system.
+
+🧪 **Stack:**
+Next.js · TypeScript · Solidity · Ethers.js · Tailwind CSS · Alchemy
+
+📆 **Duration:**
+May – July 2025
+
+---

@@ -1,0 +1,26 @@
+### 🤖 Project: **agentC**
+
+🧩 **Subject:**
+AI assistant for BreakoutwithAI.
+
+📄 **Description:**
+agentC is an intelligent AI agent designed to assist users on the BreakoutwithAI platform. It helps learners find suitable courses, provides learning recommendations, and automates customer support interactions.
+
+🔧 **Features:**
+
+* Conversational AI guidance
+* Course recommendation engine
+* Chat-based learning assistant
+* Integrated into BreakoutwithAI dashboard
+* Real-time response using OpenAI API
+
+🧑‍💻 **Role:**
+AI Engineer – Built the conversational layer and integrated agentC into the main platform.
+
+🧪 **Stack:**
+Next.js · TypeScript · OpenAI API · LangChain
+
+📆 **Duration:**
+April – May 2025
+
+---

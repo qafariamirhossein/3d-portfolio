@@ -1,0 +1,26 @@
+### 🟪 Project: **Alavi Academy**
+
+🧩 **Subject:**
+Multilingual educational platform for online psychology courses and blogs.
+
+📄 **Description:**
+Alavi Academy is an online education platform offering courses and articles focused on psychology and personal growth. It supports three languages — English, دری (Dari), and Deutsch — allowing students from diverse regions to access learning materials in their preferred language. The platform includes video courses, blogs, and user dashboards for managing enrollments and progress.
+
+🔧 **Features:**
+
+* Multilingual support (English, Dari, Deutsch)
+* Course catalog and enrollment system
+* Blog section for educational content
+* Responsive, modern UI with fast page loads
+* Admin panel for managing courses and students
+
+🧑‍💻 **Role:**
+Fullstack Developer – Designed and implemented the frontend, CMS integration, and localization system.
+
+🧪 **Stack:**
+Vite.js · React · Tailwind CSS · Firebase
+
+📆 **Duration:**
+April – June 2025
+
+---

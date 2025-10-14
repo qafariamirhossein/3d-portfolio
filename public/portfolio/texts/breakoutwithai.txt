@@ -1,0 +1,26 @@
+### 💡 Project: **BreakoutwithAI**
+
+🧩 **Subject:**
+AI-powered education platform for selling AI courses and workshops.
+
+📄 **Description:**
+BreakoutwithAI is a high-conversion landing platform built to sell AI courses with optimized SEO and sleek, modern UI design. It focuses on accessibility, responsive performance, and clear course presentation to attract AI learners and professionals worldwide.
+
+🔧 **Features:**
+
+* SEO-optimized pages for ranking and visibility
+* Integrated course catalog and checkout
+* Clean and modern user interface
+* Multi-device responsive layout
+* Integrated with **agentC** for AI assistance
+
+🧑‍💻 **Role:**
+Fullstack Developer – Built frontend, integrated payment flow, and optimized SEO structure.
+
+🧪 **Stack:**
+Next.js · Tailwind CSS · Stripe · OpenAI API · Framer Motion
+
+📆 **Duration:**
+March – May 2025
+
+---

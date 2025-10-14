@@ -1,0 +1,26 @@
+### 🎬 Project: **Animercial**
+
+🧩 **Subject:**
+3D interactive web portfolio and marketing showcase.
+
+📄 **Description:**
+Animercial is a visually rich 3D web experience designed for agencies and creative clients. It merges storytelling and motion design using Three.js to create interactive, cinematic marketing portfolios that leave a lasting impact.
+
+🔧 **Features:**
+
+* Real-time 3D animations
+* Interactive portfolio navigation
+* Embedded video and motion graphics
+* Optimized for high performance
+* Supports client branding customization
+
+🧑‍💻 **Role:**
+3D Frontend Developer – Designed and developed 3D visuals and animation sequences.
+
+🧪 **Stack:**
+Next.js · Three.js · React Three Fiber · GSAP
+
+📆 **Duration:**
+July – August 2025
+
+---

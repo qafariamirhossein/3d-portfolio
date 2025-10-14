@@ -1,0 +1,25 @@
+### 🦍 Project: **ApeGun**
+
+🧩 **Subject:**
+3D interactive marketing experience for Ape Token on Ethereum.
+
+📄 **Description:**
+ApeGun is a visually stunning, 3D interactive web experience built to market Ape Token within the Ethereum ecosystem. The project blends modern web design with immersive 3D environments to engage users and attract investors through an unforgettable experience.
+
+🔧 **Features:**
+
+* 3D interactive interface using WebGL
+* Token analytics and live data display
+* Integrated wallet and buy interface
+* Immersive animations for marketing content
+
+🧑‍💻 **Role:**
+3D Web Developer – Designed 3D scenes and integrated blockchain data feeds.
+
+🧪 **Stack:**
+Next.js · Three.js · Tailwind CSS · Ethereum · Framer Motion
+
+📆 **Duration:**
+February – April 2025
+
+---
