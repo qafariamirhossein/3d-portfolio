@@ -40,12 +40,12 @@ type TConfig = {
 
 export const config: TConfig = {
   html: {
-    title: "John Doe — 3D Portfolio",
-    fullName: "John Doe",
-    email: "johndoe@mail.com",
+    title: "Amir Qafari — 3D Portfolio",
+    fullName: "Amir Qafari",
+    email: "qafariamirhossein@gmail.com",
   },
   hero: {
-    name: "John Doe",
+    name: "Amir Qafari",
     p: ["I develop 3D visuals, user", "interfaces and web applications"],
   },
   contact: {
@@ -67,11 +67,7 @@ export const config: TConfig = {
     about: {
       p: "Introduction",
       h2: "Overview.",
-      content: `I'm a skilled software developer with experience in TypeScript and
-      JavaScript, and expertise in frameworks like React, Node.js, and
-      Three.js. I'm a quick learner and collaborate closely with clients to
-      create efficient, scalable, and user-friendly solutions that solve
-      real-world problems. Let's work together to bring your ideas to life!`,
+      content: `I'm Amir Qafari, a passionate software developer with expertise in modern web technologies including TypeScript, JavaScript, React, and Three.js. I specialize in creating immersive 3D web experiences and user interfaces that combine functionality with stunning visual appeal. With a strong foundation in full-stack development, I bring ideas to life through clean, efficient code and innovative solutions. Let's collaborate to build something extraordinary together!`,
     },
     experience: {
       p: "What I have done so far",

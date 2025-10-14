@@ -51,19 +51,19 @@ export const navLinks: TNavLink[] = [
 
 const services: TService[] = [
   {
-    title: "Web Developer",
+    title: "3D Web Developer",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "React Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Full Stack Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "UI/UX Designer",
     icon: creator,
   },
 ];
@@ -125,55 +125,42 @@ const technologies: TTechnology[] = [
 
 const experiences: TExperience[] = [
   {
-    title: "React.js Developer",
-    companyName: "Starbucks",
-    icon: starbucks,
+    title: "Frontend Developer",
+    companyName: "Tech Solutions Inc.",
+    icon: reactjs,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "June 2021 - December 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed responsive web applications using React.js, TypeScript, and modern CSS frameworks.",
+      "Implemented 3D visualizations using Three.js for interactive user experiences.",
+      "Collaborated with UI/UX designers to create pixel-perfect, accessible interfaces.",
+      "Optimized application performance and implemented best practices for code quality.",
     ],
   },
   {
-    title: "React Native Developer",
-    companyName: "Tesla",
-    icon: tesla,
+    title: "Full Stack Developer",
+    companyName: "Digital Innovations",
+    icon: nodejs,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "January 2023 - August 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Built end-to-end web applications using React, Node.js, and MongoDB.",
+      "Created RESTful APIs and integrated third-party services for enhanced functionality.",
+      "Implemented real-time features using WebSocket connections and state management.",
+      "Mentored junior developers and conducted code reviews to maintain high standards.",
     ],
   },
   {
-    title: "Web Developer",
-    companyName: "Shopify",
-    icon: shopify,
+    title: "3D Web Developer",
+    companyName: "Creative Studio",
+    icon: threejs,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "September 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    companyName: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Specialized in creating immersive 3D web experiences using Three.js and React Three Fiber.",
+      "Developed interactive 3D portfolios and product showcases for various clients.",
+      "Integrated 3D models and animations with responsive web design principles.",
+      "Explored cutting-edge web technologies including WebGL and advanced shader programming.",
     ],
   },
 ];
@@ -181,93 +168,93 @@ const experiences: TExperience[] = [
 const testimonials: TTestimonial[] = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
+      "Amir's expertise in 3D web development is exceptional. He transformed our static website into an immersive experience that our users love.",
+    name: "Sarah Johnson",
+    designation: "Product Manager",
+    company: "Tech Innovations",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
+      "Working with Amir was a game-changer. His attention to detail and innovative approach to 3D visualization exceeded our expectations.",
+    name: "Michael Chen",
+    designation: "Creative Director",
+    company: "Digital Studio",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
+      "Amir's 3D portfolio work increased our client engagement by 300%. His technical skills and creative vision are outstanding.",
+    name: "Emily Rodriguez",
+    designation: "CEO",
+    company: "Creative Agency",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
 const projects: TProject[] = [
   {
-    name: "Car Rent",
+    name: "3D Portfolio Website",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "An immersive 3D portfolio website built with React and Three.js, featuring interactive 3D models, smooth animations, and responsive design. Showcases projects and skills in a visually stunning way.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "threejs",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "typescript",
         color: "pink-text-gradient",
       },
     ],
     image: carrent,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: "https://github.com/amirqafari/3d-portfolio",
   },
   {
-    name: "Job IT",
+    name: "E-Commerce Platform",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A full-stack e-commerce solution with 3D product visualization, real-time inventory management, and secure payment processing. Built with React, Node.js, and MongoDB.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "nodejs",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "mongodb",
         color: "pink-text-gradient",
       },
     ],
     image: jobit,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: "https://github.com/amirqafari/ecommerce-platform",
   },
   {
-    name: "Trip Guide",
+    name: "Interactive 3D Dashboard",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A data visualization dashboard featuring interactive 3D charts and real-time analytics. Built with React Three Fiber, D3.js, and WebGL for high-performance rendering.",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "webgl",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "d3js",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: "https://github.com/amirqafari/3d-dashboard",
   },
 ];
 
