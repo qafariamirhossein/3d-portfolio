@@ -39,7 +39,7 @@ const ProjectCard: React.FC<{ index: number } & TProject & { onViewDetails: (pro
 
   return (
     <motion.div 
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      variants={fadeIn("up", "spring", index * 0.1, 0.3)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
