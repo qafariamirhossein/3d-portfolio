@@ -1,0 +1,193 @@
+{
+  "portfolios": [
+    {
+      "id": "3d-portfolio-website",
+      "name": "3D Portfolio Website",
+      "description": "An immersive 3D portfolio website built with React and Three.js, featuring interactive 3D models, smooth animations, and responsive design. Showcases projects and skills in a visually stunning way.",
+      "detailedDescription": "This project represents a cutting-edge approach to portfolio presentation, combining modern web technologies with 3D graphics to create an engaging user experience. The website features interactive 3D models, smooth animations, and a responsive design that works seamlessly across all devices. Built with React, Three.js, and TypeScript, it demonstrates advanced frontend development skills and creative problem-solving abilities.",
+      "shortDescription": "Immersive 3D portfolio with interactive models and animations",
+      "image": "/src/assets/carrent.png",
+      "gallery": [
+        "/src/assets/carrent.png",
+        "/src/assets/jobit.png",
+        "/src/assets/tripguide.png"
+      ],
+      "video": "/src/assets/portfolio-demo.mp4",
+      "liveDemoLink": "https://amirqafari-portfolio.netlify.app",
+      "sourceCodeLink": "https://github.com/amirqafari/3d-portfolio",
+      "technologies": [
+        "React",
+        "Three.js",
+        "TypeScript",
+        "Framer Motion",
+        "Tailwind CSS",
+        "Vite"
+      ],
+      "tags": [
+        {
+          "name": "react",
+          "color": "blue-text-gradient"
+        },
+        {
+          "name": "threejs",
+          "color": "green-text-gradient"
+        },
+        {
+          "name": "typescript",
+          "color": "pink-text-gradient"
+        }
+      ],
+      "features": [
+        "Interactive 3D models and animations",
+        "Responsive design for all devices",
+        "Smooth page transitions",
+        "Modern UI/UX design",
+        "Performance optimized",
+        "SEO friendly"
+      ],
+      "challenges": [
+        "Optimizing 3D models for web performance",
+        "Creating smooth animations across different devices",
+        "Implementing responsive 3D elements"
+      ],
+      "solutions": [
+        "Used LOD (Level of Detail) techniques for 3D models",
+        "Implemented efficient animation libraries",
+        "Created adaptive 3D rendering based on device capabilities"
+      ],
+      "duration": "3 months",
+      "teamSize": "1",
+      "role": "Full Stack Developer",
+      "client": "Personal Project",
+      "year": "2024"
+    },
+    {
+      "id": "ecommerce-platform",
+      "name": "E-Commerce Platform",
+      "description": "A full-stack e-commerce solution with 3D product visualization, real-time inventory management, and secure payment processing. Built with React, Node.js, and MongoDB.",
+      "detailedDescription": "This comprehensive e-commerce platform revolutionizes online shopping with 3D product visualization capabilities. The platform includes a complete admin dashboard, real-time inventory management, secure payment processing, and an intuitive user interface. Built with modern technologies including React, Node.js, MongoDB, and Three.js for 3D product showcases.",
+      "shortDescription": "Full-stack e-commerce with 3D product visualization",
+      "image": "/src/assets/jobit.png",
+      "gallery": [
+        "/src/assets/jobit.png",
+        "/src/assets/carrent.png",
+        "/src/assets/tripguide.png"
+      ],
+      "video": "/src/assets/ecommerce-demo.mp4",
+      "liveDemoLink": "https://ecommerce-platform-demo.netlify.app",
+      "sourceCodeLink": "https://github.com/amirqafari/ecommerce-platform",
+      "technologies": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Express",
+        "Three.js",
+        "Stripe",
+        "JWT",
+        "Redux"
+      ],
+      "tags": [
+        {
+          "name": "react",
+          "color": "blue-text-gradient"
+        },
+        {
+          "name": "nodejs",
+          "color": "green-text-gradient"
+        },
+        {
+          "name": "mongodb",
+          "color": "pink-text-gradient"
+        }
+      ],
+      "features": [
+        "3D product visualization",
+        "Real-time inventory management",
+        "Secure payment processing",
+        "Admin dashboard",
+        "User authentication",
+        "Order tracking system",
+        "Product search and filtering",
+        "Responsive design"
+      ],
+      "challenges": [
+        "Implementing secure payment processing",
+        "Managing real-time inventory updates",
+        "Optimizing 3D product loading"
+      ],
+      "solutions": [
+        "Integrated Stripe for secure payments",
+        "Used WebSocket for real-time updates",
+        "Implemented lazy loading for 3D models"
+      ],
+      "duration": "6 months",
+      "teamSize": "3",
+      "role": "Lead Developer",
+      "client": "Tech Solutions Inc.",
+      "year": "2023"
+    },
+    {
+      "id": "interactive-3d-dashboard",
+      "name": "Interactive 3D Dashboard",
+      "description": "A data visualization dashboard featuring interactive 3D charts and real-time analytics. Built with React Three Fiber, D3.js, and WebGL for high-performance rendering.",
+      "detailedDescription": "This innovative dashboard transforms complex data into interactive 3D visualizations, making it easier for users to understand trends and patterns. The dashboard features real-time data updates, customizable charts, and immersive 3D environments. Built with cutting-edge technologies including React Three Fiber, D3.js, and WebGL for optimal performance.",
+      "shortDescription": "Interactive 3D data visualization dashboard",
+      "image": "/src/assets/tripguide.png",
+      "gallery": [
+        "/src/assets/tripguide.png",
+        "/src/assets/carrent.png",
+        "/src/assets/jobit.png"
+      ],
+      "video": "/src/assets/dashboard-demo.mp4",
+      "liveDemoLink": "https://3d-dashboard-demo.netlify.app",
+      "sourceCodeLink": "https://github.com/amirqafari/3d-dashboard",
+      "technologies": [
+        "React",
+        "Three.js",
+        "D3.js",
+        "WebGL",
+        "React Three Fiber",
+        "TypeScript",
+        "WebSocket"
+      ],
+      "tags": [
+        {
+          "name": "react",
+          "color": "blue-text-gradient"
+        },
+        {
+          "name": "webgl",
+          "color": "green-text-gradient"
+        },
+        {
+          "name": "d3js",
+          "color": "pink-text-gradient"
+        }
+      ],
+      "features": [
+        "Interactive 3D charts and graphs",
+        "Real-time data visualization",
+        "Customizable dashboard layouts",
+        "High-performance WebGL rendering",
+        "Data export capabilities",
+        "Responsive design",
+        "Dark/light theme support"
+      ],
+      "challenges": [
+        "Optimizing WebGL performance for large datasets",
+        "Creating intuitive 3D interactions",
+        "Managing real-time data updates"
+      ],
+      "solutions": [
+        "Implemented efficient rendering techniques",
+        "Created user-friendly interaction patterns",
+        "Used WebSocket for real-time data streaming"
+      ],
+      "duration": "4 months",
+      "teamSize": "2",
+      "role": "Frontend Developer",
+      "client": "Data Analytics Corp",
+      "year": "2023"
+    }
+  ]
+}

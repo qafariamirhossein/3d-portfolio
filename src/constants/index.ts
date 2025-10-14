@@ -24,15 +24,11 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
 } from "../assets";
+
+// Import portfolio data from JSON file
+import portfolioData from '../data/portfolio.json';
 
 export const navLinks: TNavLink[] = [
   {
@@ -192,70 +188,28 @@ const testimonials: TTestimonial[] = [
   },
 ];
 
-const projects: TProject[] = [
-  {
-    name: "3D Portfolio Website",
-    description:
-      "An immersive 3D portfolio website built with React and Three.js, featuring interactive 3D models, smooth animations, and responsive design. Showcases projects and skills in a visually stunning way.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "threejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "typescript",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: carrent,
-    sourceCodeLink: "https://github.com/amirqafari/3d-portfolio",
-  },
-  {
-    name: "E-Commerce Platform",
-    description:
-      "A full-stack e-commerce solution with 3D product visualization, real-time inventory management, and secure payment processing. Built with React, Node.js, and MongoDB.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    sourceCodeLink: "https://github.com/amirqafari/ecommerce-platform",
-  },
-  {
-    name: "Interactive 3D Dashboard",
-    description:
-      "A data visualization dashboard featuring interactive 3D charts and real-time analytics. Built with React Three Fiber, D3.js, and WebGL for high-performance rendering.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "webgl",
-        color: "green-text-gradient",
-      },
-      {
-        name: "d3js",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    sourceCodeLink: "https://github.com/amirqafari/3d-dashboard",
-  },
-];
+// Transform the JSON data to match the TProject interface
+const projects: TProject[] = portfolioData.portfolios.map(portfolio => ({
+  id: portfolio.id,
+  name: portfolio.name,
+  description: portfolio.description,
+  detailedDescription: portfolio.detailedDescription,
+  shortDescription: portfolio.shortDescription,
+  tags: portfolio.tags,
+  image: portfolio.image,
+  gallery: portfolio.gallery,
+  video: portfolio.video,
+  liveDemoLink: portfolio.liveDemoLink,
+  sourceCodeLink: portfolio.sourceCodeLink,
+  technologies: portfolio.technologies,
+  features: portfolio.features,
+  challenges: portfolio.challenges,
+  solutions: portfolio.solutions,
+  duration: portfolio.duration,
+  teamSize: portfolio.teamSize,
+  role: portfolio.role,
+  client: portfolio.client,
+  year: portfolio.year,
+}));
 
 export { services, technologies, experiences, testimonials, projects };

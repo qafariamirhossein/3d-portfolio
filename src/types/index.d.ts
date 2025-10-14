@@ -19,13 +19,28 @@ export type TTestimonial = {
 } & Required<Pick<TCommonProps, "name">>;
 
 export type TProject = {
+  id: string;
   description: string;
+  detailedDescription?: string;
+  shortDescription?: string;
   tags: {
     name: string;
     color: string;
   }[];
   image: string;
+  gallery?: string[];
+  video?: string;
+  liveDemoLink?: string;
   sourceCodeLink: string;
+  technologies?: string[];
+  features?: string[];
+  challenges?: string[];
+  solutions?: string[];
+  duration?: string;
+  teamSize?: string;
+  role?: string;
+  client?: string;
+  year?: string;
 } & Required<Pick<TCommonProps, "name">>;
 
 export type TTechnology = Required<Omit<TCommonProps, "title">>;
