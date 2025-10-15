@@ -5,12 +5,12 @@ import { useNavigate } from "react-router-dom";
 import { ExternalLink, Eye } from "lucide-react";
 
 import { github } from "../../assets";
-import { SectionWrapper } from "../../hoc";
 import { projects } from "../../constants";
 import { fadeIn } from "../../utils/motion";
 import { config } from "../../constants/config";
 import { Header } from "../atoms/Header";
 import { TProject } from "../../types";
+import { styles } from "../../constants/styles";
 
 const ProjectCard: React.FC<{ index: number } & TProject & { onViewDetails: (projectId: string) => void }> = ({
   index,
@@ -165,7 +165,15 @@ const Works = () => {
   };
 
   return (
-    <>
+    <motion.section
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0, margin: "-100px 0px" }}
+      className={`${styles.padding} relative z-0 mx-auto max-w-7xl`}
+      id="works"
+    >
+      <span className="hash-span">&nbsp;</span>
+      
       <Header useMotion={true} {...config.sections.works} />
 
       <div className="flex w-full">
@@ -187,8 +195,8 @@ const Works = () => {
           />
         ))}
       </div>
-    </>
+    </motion.section>
   );
 };
 
-export default SectionWrapper(Works, "works");
+export default Works;
