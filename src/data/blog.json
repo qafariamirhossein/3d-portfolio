@@ -1,0 +1,84 @@
+{
+  "blogs": [
+    {
+      "id": "1",
+      "title": "Building Immersive 3D Web Experiences with Three.js and React",
+      "slug": "building-immersive-3d-web-experiences-threejs-react",
+      "excerpt": "Learn how to create stunning 3D web applications using Three.js and React Three Fiber. This comprehensive guide covers everything from basic setup to advanced techniques.",
+      "content": "Creating immersive 3D web experiences has become increasingly popular in modern web development. With the power of Three.js and React Three Fiber, developers can build interactive 3D applications that run directly in the browser.\n\n## Getting Started with Three.js\n\nThree.js is a powerful JavaScript library that makes WebGL accessible to developers. It provides a high-level API for creating 3D graphics without needing to write complex WebGL code.\n\n### Key Concepts\n\n- **Scenes**: The 3D world where objects are placed\n- **Cameras**: Define the viewpoint of the scene\n- **Renderers**: Draw the scene to the screen\n- **Meshes**: 3D objects with geometry and materials\n- **Lights**: Illuminate the scene\n\n## React Three Fiber Integration\n\nReact Three Fiber brings the declarative nature of React to Three.js, making it easier to manage 3D scenes with component-based architecture.\n\n### Benefits\n\n- Component-based 3D scene management\n- Automatic cleanup and memory management\n- Integration with React's state management\n- TypeScript support out of the box\n\n## Best Practices\n\n1. **Performance Optimization**: Use instanced rendering for repeated objects\n2. **Memory Management**: Properly dispose of geometries and materials\n3. **Responsive Design**: Adapt 3D scenes to different screen sizes\n4. **Loading States**: Provide feedback during asset loading\n\n## Conclusion\n\nBuilding 3D web experiences requires a good understanding of both 3D graphics concepts and modern web development practices. With the right tools and techniques, you can create engaging and performant 3D applications that enhance user experience.",
+      "author": "Amir Qafari",
+      "authorImage": "/me/me.png",
+      "publishedAt": "2024-01-15",
+      "updatedAt": "2024-01-15",
+      "readTime": "8 min read",
+      "category": "Web Development",
+      "tags": ["Three.js", "React", "WebGL", "3D Graphics", "Frontend"],
+      "featuredImage": "/portfolio/images/threejs-project.png",
+      "seo": {
+        "metaTitle": "Building Immersive 3D Web Experiences with Three.js and React | Amir Qafari",
+        "metaDescription": "Learn how to create stunning 3D web applications using Three.js and React Three Fiber. Comprehensive guide covering setup, best practices, and advanced techniques.",
+        "keywords": ["Three.js", "React Three Fiber", "3D web development", "WebGL", "interactive 3D", "web graphics"]
+      }
+    },
+    {
+      "id": "2",
+      "title": "Modern React Development: Hooks, Context, and Performance Optimization",
+      "slug": "modern-react-development-hooks-context-performance",
+      "excerpt": "Explore advanced React patterns including custom hooks, context API, and performance optimization techniques for building scalable applications.",
+      "content": "React has evolved significantly with the introduction of hooks and the context API. These modern features have revolutionized how we build React applications.\n\n## Understanding React Hooks\n\nHooks allow you to use state and other React features in functional components. They provide a more direct API to the concepts you already know.\n\n### Essential Hooks\n\n- **useState**: Manage component state\n- **useEffect**: Handle side effects\n- **useContext**: Access context values\n- **useReducer**: Complex state management\n- **useMemo**: Memoize expensive calculations\n- **useCallback**: Memoize functions\n\n## Context API Deep Dive\n\nThe Context API provides a way to pass data through the component tree without having to pass props down manually at every level.\n\n### When to Use Context\n\n- Global state that many components need\n- Theme information\n- User authentication status\n- Language preferences\n\n## Performance Optimization\n\nReact applications can suffer from performance issues if not properly optimized. Here are key strategies:\n\n### 1. Memoization\n\nUse `React.memo`, `useMemo`, and `useCallback` to prevent unnecessary re-renders.\n\n### 2. Code Splitting\n\nImplement lazy loading for components and routes to reduce initial bundle size.\n\n### 3. Virtual Scrolling\n\nFor large lists, implement virtual scrolling to maintain performance.\n\n## Custom Hooks\n\nCustom hooks allow you to extract component logic into reusable functions.\n\n```javascript\nfunction useLocalStorage(key, initialValue) {\n  const [storedValue, setStoredValue] = useState(() => {\n    try {\n      const item = window.localStorage.getItem(key);\n      return item ? JSON.parse(item) : initialValue;\n    } catch (error) {\n      return initialValue;\n    }\n  });\n\n  const setValue = (value) => {\n    try {\n      setStoredValue(value);\n      window.localStorage.setItem(key, JSON.stringify(value));\n    } catch (error) {\n      console.error(error);\n    }\n  };\n\n  return [storedValue, setValue];\n}\n```\n\n## Conclusion\n\nModern React development focuses on functional components, hooks, and performance optimization. By mastering these concepts, you can build more maintainable and efficient applications.",
+      "author": "Amir Qafari",
+      "authorImage": "/me/me.png",
+      "publishedAt": "2024-01-10",
+      "updatedAt": "2024-01-10",
+      "readTime": "12 min read",
+      "category": "React",
+      "tags": ["React Hooks", "Context API", "Performance", "JavaScript", "Frontend"],
+      "featuredImage": "/portfolio/images/react-project.png",
+      "seo": {
+        "metaTitle": "Modern React Development: Hooks, Context, and Performance | Amir Qafari",
+        "metaDescription": "Master modern React patterns including hooks, context API, and performance optimization. Learn advanced techniques for building scalable React applications.",
+        "keywords": ["React hooks", "Context API", "React performance", "custom hooks", "React optimization", "modern React"]
+      }
+    },
+    {
+      "id": "3",
+      "title": "TypeScript Best Practices for Large-Scale Applications",
+      "slug": "typescript-best-practices-large-scale-applications",
+      "excerpt": "Discover essential TypeScript patterns and practices for building maintainable, scalable applications. Learn advanced type techniques and project organization.",
+      "content": "TypeScript has become the standard for large-scale JavaScript applications. Its type system helps catch errors early and improves code maintainability.\n\n## Type System Fundamentals\n\nUnderstanding TypeScript's type system is crucial for writing effective code.\n\n### Basic Types\n\n```typescript\n// Primitive types\nlet name: string = 'Amir';\nlet age: number = 25;\nlet isActive: boolean = true;\n\n// Array types\nlet numbers: number[] = [1, 2, 3];\nlet names: Array<string> = ['Alice', 'Bob'];\n\n// Object types\ninterface User {\n  id: number;\n  name: string;\n  email?: string; // Optional property\n}\n```\n\n## Advanced Type Techniques\n\n### Union and Intersection Types\n\n```typescript\n// Union types\ntype Status = 'loading' | 'success' | 'error';\n\n// Intersection types\ninterface Person {\n  name: string;\n}\n\ninterface Employee {\n  id: number;\n}\n\ntype EmployeePerson = Person & Employee;\n```\n\n### Generic Types\n\n```typescript\ninterface ApiResponse<T> {\n  data: T;\n  status: number;\n  message: string;\n}\n\n// Usage\nconst userResponse: ApiResponse<User> = {\n  data: { id: 1, name: 'Amir' },\n  status: 200,\n  message: 'Success'\n};\n```\n\n## Project Organization\n\n### Folder Structure\n\n```\nsrc/\n  components/\n    atoms/\n    molecules/\n    organisms/\n  hooks/\n  services/\n  types/\n  utils/\n  constants/\n```\n\n### Type Definitions\n\nKeep type definitions in dedicated files:\n\n```typescript\n// types/index.ts\nexport interface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\nexport type UserRole = 'admin' | 'user' | 'moderator';\n```\n\n## Error Handling\n\n### Result Pattern\n\n```typescript\ntype Result<T, E = Error> = \n  | { success: true; data: T }\n  | { success: false; error: E };\n\nasync function fetchUser(id: number): Promise<Result<User>> {\n  try {\n    const user = await api.getUser(id);\n    return { success: true, data: user };\n  } catch (error) {\n    return { success: false, error: error as Error };\n  }\n}\n```\n\n## Testing with TypeScript\n\n### Jest Configuration\n\n```typescript\n// jest.config.ts\nimport type { Config } from '@jest/types';\n\nconst config: Config.InitialOptions = {\n  preset: 'ts-jest',\n  testEnvironment: 'node',\n  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],\n};\n\nexport default config;\n```\n\n## Performance Considerations\n\n### Type-only Imports\n\n```typescript\nimport type { User } from './types';\nimport { createUser } from './services';\n```\n\n### Compiler Options\n\n```json\n{\n  \"compilerOptions\": {\n    \"strict\": true,\n    \"noUnusedLocals\": true,\n    \"noUnusedParameters\": true,\n    \"exactOptionalPropertyTypes\": true\n  }\n}\n```\n\n## Conclusion\n\nTypeScript provides powerful tools for building robust applications. By following these best practices, you can create maintainable, scalable codebases that are easier to debug and extend.",
+      "author": "Amir Qafari",
+      "authorImage": "/me/me.png",
+      "publishedAt": "2024-01-05",
+      "updatedAt": "2024-01-05",
+      "readTime": "15 min read",
+      "category": "TypeScript",
+      "tags": ["TypeScript", "Type System", "Best Practices", "Large Scale", "JavaScript"],
+      "featuredImage": "/portfolio/images/typescript-project.png",
+      "seo": {
+        "metaTitle": "TypeScript Best Practices for Large-Scale Applications | Amir Qafari",
+        "metaDescription": "Master TypeScript for large-scale applications. Learn advanced type techniques, project organization, and best practices for maintainable code.",
+        "keywords": ["TypeScript", "type system", "best practices", "large scale", "JavaScript", "type safety"]
+      }
+    },
+    {
+      "id": "4",
+      "title": "Building Responsive 3D Portfolios with React and Three.js",
+      "slug": "building-responsive-3d-portfolios-react-threejs",
+      "excerpt": "Create stunning, responsive 3D portfolio websites that work across all devices. Learn techniques for optimizing 3D content for mobile and desktop.",
+      "content": "3D portfolios are becoming increasingly popular as a way to showcase work in an engaging, interactive format. However, creating responsive 3D experiences presents unique challenges.\n\n## The Challenge of Responsive 3D\n\n3D content doesn't naturally adapt to different screen sizes like traditional web content. We need to consider:\n\n- Performance on mobile devices\n- Touch interactions\n- Screen orientation changes\n- Loading times\n\n## Responsive Design Strategies\n\n### 1. Adaptive Rendering\n\nAdjust render quality based on device capabilities:\n\n```javascript\nconst getDevicePixelRatio = () => {\n  return Math.min(window.devicePixelRatio, 2);\n};\n\nconst renderer = new THREE.WebGLRenderer({\n  antialias: window.innerWidth > 768\n});\n\nrenderer.setPixelRatio(getDevicePixelRatio());\n```\n\n### 2. Responsive Camera\n\nAdjust camera settings for different screen sizes:\n\n```javascript\nconst updateCamera = (width, height) => {\n  camera.aspect = width / height;\n  camera.updateProjectionMatrix();\n  renderer.setSize(width, height);\n};\n\nwindow.addEventListener('resize', () => {\n  updateCamera(window.innerWidth, window.innerHeight);\n});\n```\n\n## Mobile Optimization\n\n### Touch Controls\n\nImplement touch-friendly interactions:\n\n```javascript\nconst controls = new OrbitControls(camera, renderer.domElement);\ncontrols.enableDamping = true;\ncontrols.dampingFactor = 0.05;\ncontrols.enableZoom = true;\ncontrols.enablePan = false; // Disable pan on mobile\n```\n\n### Performance Considerations\n\n- Reduce polygon count on mobile\n- Use lower resolution textures\n- Implement level-of-detail (LOD) systems\n- Optimize shaders\n\n## Loading States\n\nProvide visual feedback during 3D content loading:\n\n```jsx\nconst [isLoading, setIsLoading] = useState(true);\nconst [loadingProgress, setLoadingProgress] = useState(0);\n\nreturn (\n  <div className=\"relative\">\n    {isLoading && (\n      <div className=\"absolute inset-0 flex items-center justify-center\">\n        <div className=\"text-center\">\n          <div className=\"animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4\"></div>\n          <p className=\"text-white\">Loading 3D content... {loadingProgress}%</p>\n        </div>\n      </div>\n    )}\n    <Canvas>\n      {/* 3D content */}\n    </Canvas>\n  </div>\n);\n```\n\n## SEO Considerations\n\n### Meta Tags\n\n```html\n<meta name=\"description\" content=\"Interactive 3D portfolio showcasing web development projects\" />\n<meta property=\"og:title\" content=\"Amir Qafari - 3D Portfolio\" />\n<meta property=\"og:description\" content=\"Explore my 3D portfolio featuring React and Three.js projects\" />\n<meta property=\"og:image\" content=\"/og-image.jpg\" />\n```\n\n### Structured Data\n\n```json\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Person\",\n  \"name\": \"Amir Qafari\",\n  \"jobTitle\": \"3D Web Developer\",\n  \"url\": \"https://amirqafari.com\",\n  \"sameAs\": [\n    \"https://github.com/amirqafari\",\n    \"https://linkedin.com/in/amirqafari\"\n  ]\n}\n```\n\n## Performance Monitoring\n\nTrack performance metrics:\n\n```javascript\nconst monitorPerformance = () => {\n  const observer = new PerformanceObserver((list) => {\n    for (const entry of list.getEntries()) {\n      if (entry.entryType === 'measure') {\n        console.log(`${entry.name}: ${entry.duration}ms`);\n      }\n    }\n  });\n  \n  observer.observe({ entryTypes: ['measure'] });\n};\n```\n\n## Conclusion\n\nBuilding responsive 3D portfolios requires careful consideration of performance, user experience, and SEO. By following these strategies, you can create engaging 3D experiences that work well across all devices and platforms.",
+      "author": "Amir Qafari",
+      "authorImage": "/me/me.png",
+      "publishedAt": "2024-01-01",
+      "updatedAt": "2024-01-01",
+      "readTime": "10 min read",
+      "category": "Portfolio",
+      "tags": ["3D Portfolio", "Responsive Design", "Three.js", "React", "Mobile Optimization"],
+      "featuredImage": "/portfolio/images/portfolio-project.png",
+      "seo": {
+        "metaTitle": "Building Responsive 3D Portfolios with React and Three.js | Amir Qafari",
+        "metaDescription": "Learn how to create responsive 3D portfolio websites that work across all devices. Mobile optimization, performance tips, and SEO strategies.",
+        "keywords": ["3D portfolio", "responsive design", "Three.js", "mobile optimization", "portfolio website", "3D web development"]
+      }
+    }
+  ]
+}

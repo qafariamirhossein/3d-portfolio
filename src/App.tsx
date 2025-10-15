@@ -4,6 +4,7 @@ import {
   Navbar,
   PortfolioDetails,
   Home,
+  Blog,
 } from "./components";
 import { useEffect } from "react";
 import { config } from "./constants/config";
@@ -21,6 +22,8 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<Blog />} />
           <Route path="/portfolio/:id" element={<PortfolioDetails />} />
         </Routes>
       </div>

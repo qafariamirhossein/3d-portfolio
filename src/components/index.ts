@@ -14,7 +14,7 @@ import Works from "./sections/Works";
 import Feedbacks from "./sections/Feedbacks";
 import Contact from "./sections/Contact";
 import CanvasLoader from "./layout/Loader";
-import { PortfolioDetails, Home } from "./pages";
+import { PortfolioDetails, Home, Blog } from "./pages";
 
 export {
   Hero,
@@ -32,4 +32,5 @@ export {
   StarsCanvas,
   PortfolioDetails,
   Home,
+  Blog,
 };
