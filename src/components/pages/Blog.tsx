@@ -319,7 +319,7 @@ const Blog: React.FC = () => {
       "author": {
         "@type": "Person",
         "name": "Amir Qafari",
-        "url": "https://amirqafari.com"
+        "url": "https://amirqafari.vercel.app"
       },
       "publisher": {
         "@type": "Person",
