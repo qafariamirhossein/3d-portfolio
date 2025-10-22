@@ -180,7 +180,7 @@ class BlogApiService {
   }
 
   // Helper method to transform blog post data
-  private transformBlogPost(blog: BlogPost) {
+  private transformBlogPost(blog: BlogPost): TransformedBlogPost {
     return {
       id: blog.id,
       title: blog.attributes.title,
@@ -220,7 +220,7 @@ class BlogApiService {
     sort?: string;
     search?: string;
   } = {}): Promise<{
-    blogs: any[];
+    blogs: TransformedBlogPost[];
     pagination: {
       page: number;
       pageSize: number;
@@ -287,7 +287,7 @@ class BlogApiService {
   }
 
   // Get a single blog post by slug
-  async getBlogBySlug(slug: string): Promise<any> {
+  async getBlogBySlug(slug: string): Promise<TransformedBlogPost> {
     try {
       const queryParams = new URLSearchParams();
       queryParams.append('filters[slug][$eq]', slug);
@@ -317,25 +317,25 @@ class BlogApiService {
   }
 
   // Get featured blog posts
-  async getFeaturedBlogs(): Promise<any[]> {
+  async getFeaturedBlogs(): Promise<TransformedBlogPost[]> {
     const result = await this.getBlogs({ featured: true, pageSize: 3 });
     return result.blogs;
   }
 
   // Get blog posts by category
-  async getBlogsByCategory(category: string): Promise<any[]> {
+  async getBlogsByCategory(category: string): Promise<TransformedBlogPost[]> {
     const result = await this.getBlogs({ category });
     return result.blogs;
   }
 
   // Get blog posts by tags
-  async getBlogsByTags(tags: string[]): Promise<any[]> {
+  async getBlogsByTags(tags: string[]): Promise<TransformedBlogPost[]> {
     const result = await this.getBlogs({ tags });
     return result.blogs;
   }
 
   // Search blog posts
-  async searchBlogs(query: string): Promise<any[]> {
+  async searchBlogs(query: string): Promise<TransformedBlogPost[]> {
     const result = await this.getBlogs({ search: query });
     return result.blogs;
   }
@@ -394,6 +394,31 @@ class BlogApiService {
 
 // Create and export the API service instance
 export const blogApi = new BlogApiService();
+
+// Transformed blog post type (what components actually use)
+export interface TransformedBlogPost {
+  id: number;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  authorImage: string;
+  publishedAt: string;
+  updatedAt: string;
+  readTime: string;
+  category: string;
+  tags: string[];
+  featuredImage: string;
+  seo: {
+    metaTitle: string;
+    metaDescription: string;
+    keywords: string[];
+  };
+  views: number;
+  likes: number;
+  featured: boolean;
+}
 
 // Export types for use in components
 export type { BlogPost, Author, Category, Tag };

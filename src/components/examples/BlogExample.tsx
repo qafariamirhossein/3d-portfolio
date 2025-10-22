@@ -4,17 +4,17 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { blogApi, type BlogPost } from '../../api/blogApi';
+import { blogApi, type TransformedBlogPost } from '../../api/blogApi';
 
 interface BlogExampleProps {
   className?: string;
 }
 
 const BlogExample: React.FC<BlogExampleProps> = ({ className = '' }) => {
-  const [blogs, setBlogs] = useState<BlogPost[]>([]);
+  const [blogs, setBlogs] = useState<TransformedBlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [featuredBlogs, setFeaturedBlogs] = useState<BlogPost[]>([]);
+  const [featuredBlogs, setFeaturedBlogs] = useState<TransformedBlogPost[]>([]);
 
   useEffect(() => {
     loadBlogs();
