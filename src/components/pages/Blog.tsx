@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, User, ArrowLeft, Tag, Search } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeHighlight from 'rehype-highlight';
 import blogData from '../../data/blog.json';
+import 'highlight.js/styles/github-dark.css';
 
 interface BlogPost {
   id: string;
@@ -268,8 +272,54 @@ const BlogPost: React.FC<{ post: BlogPost; onBack: () => void }> = ({ post, onBa
 
       {/* Post Content */}
       <div className="prose prose-invert prose-lg max-w-none">
-        <div className="text-gray-300 leading-relaxed whitespace-pre-line">
-          {post.content}
+        <div className="text-gray-300 leading-relaxed">
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeHighlight]}
+            components={{
+            h1: ({ children }) => <h1 className="text-3xl font-bold text-white mb-6 mt-8">{children}</h1>,
+            h2: ({ children }) => <h2 className="text-2xl font-bold text-white mb-4 mt-6">{children}</h2>,
+            h3: ({ children }) => <h3 className="text-xl font-bold text-white mb-3 mt-5">{children}</h3>,
+            h4: ({ children }) => <h4 className="text-lg font-bold text-white mb-2 mt-4">{children}</h4>,
+            p: ({ children }) => <p className="mb-4 text-gray-300 leading-relaxed">{children}</p>,
+            ul: ({ children }) => <ul className="list-disc list-inside mb-4 text-gray-300 space-y-1">{children}</ul>,
+            ol: ({ children }) => <ol className="list-decimal list-inside mb-4 text-gray-300 space-y-1">{children}</ol>,
+            li: ({ children }) => <li className="text-gray-300">{children}</li>,
+            code: ({ children, className }) => {
+              const isInline = !className;
+              return isInline ? (
+                <code className="bg-gray-800 text-primary px-2 py-1 rounded text-sm font-mono">{children}</code>
+              ) : (
+                <code className={className}>{children}</code>
+              );
+            },
+            pre: ({ children }) => (
+              <pre className="bg-gray-900 p-4 rounded-lg overflow-x-auto mb-4 border border-gray-700">
+                {children}
+              </pre>
+            ),
+            blockquote: ({ children }) => (
+              <blockquote className="border-l-4 border-primary pl-4 italic text-gray-400 mb-4">
+                {children}
+              </blockquote>
+            ),
+            strong: ({ children }) => <strong className="font-bold text-white">{children}</strong>,
+            em: ({ children }) => <em className="italic text-gray-200">{children}</em>,
+            a: ({ children, href }) => (
+              <a 
+                href={href} 
+                className="text-primary hover:text-primary-light underline transition-colors duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {children}
+              </a>
+            ),
+            hr: () => <hr className="border-gray-700 my-8" />,
+            }}
+          >
+            {post.content}
+          </ReactMarkdown>
         </div>
       </div>
 
