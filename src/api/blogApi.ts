@@ -180,33 +180,69 @@ class BlogApiService {
   }
 
   // Helper method to transform blog post data
-  private transformBlogPost(blog: BlogPost): TransformedBlogPost {
+  private transformBlogPost(blog: any): TransformedBlogPost {
+    // Handle both possible response formats (flat or nested)
+    const blogData = blog.attributes || blog;
+    
+    // Get author name (handle multiple formats)
+    const authorName = blogData.author?.data?.attributes?.name || 
+                      blogData.author?.attributes?.name || 
+                      blogData.author?.name || 
+                      'Unknown Author';
+    
+    // Get author image/avatar
+    const authorImage = blogData.author?.data?.attributes?.avatar?.data?.attributes?.url ||
+                       blogData.author?.attributes?.avatar?.data?.attributes?.url ||
+                       blogData.author?.avatar?.data?.attributes?.url ||
+                       blogData.author?.avatar?.url ||
+                       '/me/me.png';
+    
+    // Get category name
+    const categoryName = blogData.category?.data?.attributes?.name || 
+                        blogData.category?.attributes?.name || 
+                        blogData.category?.name || 
+                        'Uncategorized';
+    
+    // Get tags (handle both single relations and collections)
+    let tags: string[] = [];
+    if (blogData.tags?.data) {
+      // Collection format (v4+)
+      tags = blogData.tags.data.map((tag: any) => tag.attributes?.name || tag.name);
+    } else if (blogData.tags) {
+      // Could be an array or single object
+      const tagsArray = Array.isArray(blogData.tags) ? blogData.tags : [blogData.tags];
+      tags = tagsArray.map((tag: any) => tag.attributes?.name || tag.name).filter(Boolean);
+    }
+    
+    // Get featured image
+    const featuredImageUrl = blogData.featuredImage?.data?.attributes?.url ||
+                             blogData.featuredImage?.data?.url ||
+                             blogData.featuredImage?.attributes?.url ||
+                             blogData.featuredImage?.url ||
+                             '/portfolio/images/default-blog.png';
+    
     return {
       id: blog.id,
-      title: blog.attributes.title,
-      slug: blog.attributes.slug,
-      excerpt: blog.attributes.excerpt,
-      content: blog.attributes.content,
-      author: blog.attributes.author?.data?.attributes?.name || 'Unknown Author',
-      authorImage: blog.attributes.author?.data?.attributes?.avatar?.data?.attributes?.url 
-        ? this.getImageUrl(blog.attributes.author.data.attributes.avatar.data.attributes.url)
-        : '/me/me.png',
-      publishedAt: blog.attributes.publishedAt.split('T')[0], // Format as YYYY-MM-DD
-      updatedAt: blog.attributes.updatedAt.split('T')[0],
-      readTime: `${blog.attributes.readingTime} min read`,
-      category: blog.attributes.category?.data?.attributes?.name || 'Uncategorized',
-      tags: blog.attributes.tags?.data?.map(tag => tag.attributes.name) || [],
-      featuredImage: blog.attributes.featuredImage?.data?.attributes?.url
-        ? this.getImageUrl(blog.attributes.featuredImage.data.attributes.url)
-        : '/portfolio/images/default-blog.png',
+      title: blogData.title,
+      slug: blogData.slug,
+      excerpt: blogData.excerpt,
+      content: blogData.content,
+      author: authorName,
+      authorImage: authorImage.startsWith('http') ? authorImage : this.getImageUrl(authorImage),
+      publishedAt: blogData.publishedAt ? blogData.publishedAt.split('T')[0] : new Date().toISOString().split('T')[0],
+      updatedAt: blogData.updatedAt ? blogData.updatedAt.split('T')[0] : new Date().toISOString().split('T')[0],
+      readTime: `${blogData.readingTime || 5} min read`,
+      category: categoryName,
+      tags: tags,
+      featuredImage: featuredImageUrl.startsWith('http') ? featuredImageUrl : this.getImageUrl(featuredImageUrl),
       seo: {
-        metaTitle: blog.attributes.seoTitle || blog.attributes.title,
-        metaDescription: blog.attributes.seoDescription || blog.attributes.excerpt,
-        keywords: blog.attributes.tags?.data?.map(tag => tag.attributes.name) || []
+        metaTitle: blogData.seoTitle || blogData.title,
+        metaDescription: blogData.seoDescription || blogData.excerpt,
+        keywords: tags
       },
-      views: blog.attributes.views,
-      likes: blog.attributes.likes,
-      featured: blog.attributes.featured
+      views: blogData.views || 0,
+      likes: blogData.likes || 0,
+      featured: blogData.featured || false
     };
   }
 
@@ -256,12 +292,8 @@ class BlogApiService {
         queryParams.append('filters[$or][2][content][$containsi]', params.search);
       }
       
-      // Populate relations
-      queryParams.append('populate[0]', 'featuredImage');
-      queryParams.append('populate[1]', 'author');
-      queryParams.append('populate[2]', 'author.avatar');
-      queryParams.append('populate[3]', 'category');
-      queryParams.append('populate[4]', 'tags');
+      // Populate all relations
+      queryParams.append('populate', '*');
 
       const response = await fetch(`${this.baseUrl}/blogs?${queryParams.toString()}`);
       
@@ -291,11 +323,7 @@ class BlogApiService {
     try {
       const queryParams = new URLSearchParams();
       queryParams.append('filters[slug][$eq]', slug);
-      queryParams.append('populate[0]', 'featuredImage');
-      queryParams.append('populate[1]', 'author');
-      queryParams.append('populate[2]', 'author.avatar');
-      queryParams.append('populate[3]', 'category');
-      queryParams.append('populate[4]', 'tags');
+      queryParams.append('populate', '*');
 
       const response = await fetch(`${this.baseUrl}/blogs?${queryParams.toString()}`);
       

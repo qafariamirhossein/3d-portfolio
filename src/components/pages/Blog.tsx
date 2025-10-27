@@ -5,11 +5,12 @@ import { Calendar, Clock, User, ArrowLeft, Tag, Search } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
-import blogData from '../../data/blog.json';
+import { blogApi } from '../../api/blogApi';
 import 'highlight.js/styles/github-dark.css';
 
+// Interface that extends TransformedBlogPost for frontend compatibility
 interface BlogPost {
-  id: string;
+  id: string | number;
   title: string;
   slug: string;
   excerpt: string;
@@ -27,6 +28,9 @@ interface BlogPost {
     metaDescription: string;
     keywords: string[];
   };
+  views?: number;
+  likes?: number;
+  featured?: boolean;
 }
 
 interface BlogListProps {
@@ -346,11 +350,47 @@ const BlogPost: React.FC<{ post: BlogPost; onBack: () => void }> = ({ post, onBa
 const Blog: React.FC = () => {
   const [currentView, setCurrentView] = useState<'list' | 'post'>('list');
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const { slug } = useParams<{ slug: string }>();
-  
-  const posts: BlogPost[] = blogData.blogs;
 
   useEffect(() => {
+    // Fetch blog posts from Strapi CMS
+    const fetchBlogs = async () => {
+      try {
+        setIsLoading(true);
+        const response = await blogApi.getBlogs();
+        const transformedPosts: BlogPost[] = response.blogs.map(post => ({
+          id: post.id,
+          title: post.title,
+          slug: post.slug,
+          excerpt: post.excerpt,
+          content: post.content,
+          author: post.author,
+          authorImage: post.authorImage,
+          publishedAt: post.publishedAt,
+          updatedAt: post.updatedAt,
+          readTime: post.readTime,
+          category: post.category,
+          tags: post.tags,
+          featuredImage: post.featuredImage,
+          seo: post.seo,
+          views: post.views,
+          likes: post.likes,
+          featured: post.featured
+        }));
+        setPosts(transformedPosts);
+      } catch (error) {
+        console.error('Error fetching blogs:', error);
+        // Fallback to empty array if CMS is not available
+        setPosts([]);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchBlogs();
+
     // Set up SEO meta tags for the blog page
     document.title = 'Blog - Amir Qafari | 3D Web Developer';
     
@@ -388,7 +428,7 @@ const Blog: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (slug) {
+    if (slug && posts.length > 0) {
       const post = posts.find(p => p.slug === slug);
       if (post) {
         setSelectedPost(post);
@@ -416,7 +456,14 @@ const Blog: React.FC = () => {
     <div className="bg-primary relative z-0 min-h-screen">
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          {currentView === 'list' ? (
+          {isLoading ? (
+            <div className="flex items-center justify-center min-h-[400px]">
+              <div className="text-center">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
+                <p className="text-gray-300">Loading blog posts...</p>
+              </div>
+            </div>
+          ) : currentView === 'list' ? (
             <div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
