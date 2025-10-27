@@ -4,7 +4,11 @@
  */
 
 const STRAPI_URL = import.meta.env.VITE_STRAPI_URL || 'http://localhost:1337';
-const API_URL = `${STRAPI_URL}/api`;
+
+// Use proxy path in production (Vercel proxy)
+// In development, use the full Strapi URL
+const isProduction = import.meta.env.PROD;
+const API_URL = isProduction ? '/api' : `${STRAPI_URL}/api`;
 
 // Types for Strapi responses
 interface StrapiResponse<T> {
