@@ -199,7 +199,13 @@ class BlogApiService {
                        blogData.author?.attributes?.avatar?.data?.attributes?.url ||
                        blogData.author?.avatar?.data?.attributes?.url ||
                        blogData.author?.avatar?.url ||
-                       '/me/me.png';
+                       '/me.png';
+    
+    // Get author bio
+    const authorBio = blogData.author?.data?.attributes?.bio || 
+                      blogData.author?.attributes?.bio || 
+                      blogData.author?.bio || 
+                      'Passionate 3D web developer creating immersive digital experiences with React and Three.js.';
     
     // Get category name
     const categoryName = blogData.category?.data?.attributes?.name || 
@@ -232,6 +238,7 @@ class BlogApiService {
       excerpt: blogData.excerpt,
       content: blogData.content,
       author: authorName,
+      authorBio: authorBio,
       authorImage: authorImage.startsWith('http') ? authorImage : this.getImageUrl(authorImage),
       publishedAt: blogData.publishedAt ? blogData.publishedAt.split('T')[0] : new Date().toISOString().split('T')[0],
       updatedAt: blogData.updatedAt ? blogData.updatedAt.split('T')[0] : new Date().toISOString().split('T')[0],
@@ -435,6 +442,7 @@ export interface TransformedBlogPost {
   excerpt: string;
   content: string;
   author: string;
+  authorBio: string;
   authorImage: string;
   publishedAt: string;
   updatedAt: string;

@@ -16,6 +16,7 @@ interface BlogPost {
   excerpt: string;
   content: string;
   author: string;
+  authorBio: string;
   authorImage: string;
   publishedAt: string;
   updatedAt: string;
@@ -61,7 +62,7 @@ const BlogCard: React.FC<{ post: BlogPost; onPostClick: (slug: string) => void }
       </div>
       
       <div className="space-y-3">
-        <h3 className="text-xl font-bold text-white group-hover:text-primary transition-colors duration-300 line-clamp-2">
+        <h3 className="text-xl font-bold text-white group-hover:text-secondary transition-colors duration-300 line-clamp-2">
           {post.title}
         </h3>
         
@@ -327,6 +328,7 @@ const BlogPost: React.FC<{ post: BlogPost; onBack: () => void }> = ({ post, onBa
         </div>
       </div>
 
+
       {/* Author Bio */}
       <div className="mt-12 p-6 bg-gray-800 rounded-2xl">
         <div className="flex items-center gap-4">
@@ -338,7 +340,7 @@ const BlogPost: React.FC<{ post: BlogPost; onBack: () => void }> = ({ post, onBa
           <div>
             <h3 className="text-xl font-bold text-white mb-2">{post.author}</h3>
             <p className="text-gray-300">
-              Passionate 3D web developer creating immersive digital experiences with React and Three.js.
+              {post.authorBio}
             </p>
           </div>
         </div>
@@ -367,6 +369,7 @@ const Blog: React.FC = () => {
           excerpt: post.excerpt,
           content: post.content,
           author: post.author,
+          authorBio: post.authorBio,
           authorImage: post.authorImage,
           publishedAt: post.publishedAt,
           updatedAt: post.updatedAt,
