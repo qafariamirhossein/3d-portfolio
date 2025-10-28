@@ -14,8 +14,8 @@
   "attributes": {
     "name": {
       "type": "string",
-      "required": true,
-      "maxLength": 100
+      "maxLength": 100,
+      "required": true
     },
     "email": {
       "type": "email",
@@ -30,7 +30,9 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "socialLinks": {
       "type": "json",
@@ -46,6 +48,13 @@
       "relation": "oneToMany",
       "target": "api::blog.blog",
       "mappedBy": "author"
+    },
+    "ck": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultMarkdown"
+      }
     }
   }
 }

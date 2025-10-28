@@ -405,6 +405,13 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
         maxLength: 500;
       }>;
     blogs: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'>;
+    ck: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultMarkdown';
+        }
+      >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
     email: Schema.Attribute.Email & Schema.Attribute.Required & Schema.Attribute.Unique;
@@ -438,7 +445,14 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
   attributes: {
     author: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
-    content: Schema.Attribute.RichText & Schema.Attribute.Required;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.Required &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultMarkdown';
+        }
+      >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
     excerpt: Schema.Attribute.Text &

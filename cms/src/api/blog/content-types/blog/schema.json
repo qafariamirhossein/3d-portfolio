@@ -14,8 +14,8 @@
   "attributes": {
     "title": {
       "type": "string",
-      "required": true,
-      "maxLength": 200
+      "maxLength": 200,
+      "required": true
     },
     "slug": {
       "type": "uid",
@@ -27,21 +27,22 @@
       "maxLength": 500,
       "required": true
     },
-    "content": {
-      "type": "richtext",
-      "required": true
-    },
     "featuredImage": {
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "gallery": {
       "type": "media",
       "multiple": true,
       "required": false,
-      "allowedTypes": ["images", "videos"]
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
     },
     "author": {
       "type": "relation",
@@ -78,9 +79,6 @@
       "type": "boolean",
       "default": false
     },
-    "publishedAt": {
-      "type": "datetime"
-    },
     "views": {
       "type": "integer",
       "default": 0,
@@ -90,6 +88,14 @@
       "type": "integer",
       "default": 0,
       "min": 0
+    },
+    "content": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultMarkdown"
+      },
+      "required": true
     }
   }
 }
