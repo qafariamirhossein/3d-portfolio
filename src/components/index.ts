@@ -14,6 +14,7 @@ import Works from "./sections/Works";
 import Feedbacks from "./sections/Feedbacks";
 import Contact from "./sections/Contact";
 import CanvasLoader from "./layout/Loader";
+import ThemeToggle from "./atoms/ThemeToggle";
 import { PortfolioDetails, Home, Blog } from "./pages";
 
 export {
@@ -30,6 +31,7 @@ export {
   BallCanvas,
   ComputersCanvas,
   StarsCanvas,
+  ThemeToggle,
   PortfolioDetails,
   Home,
   Blog,
