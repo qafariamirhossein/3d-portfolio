@@ -184,7 +184,7 @@ const Works = () => {
       whileInView="show"
       viewport={{ once: true, amount: 0, margin: "-100px 0px" }}
       className={`${styles.padding} relative z-0 mx-auto max-w-7xl`}
-      id="works"
+      id="work"
     >
       <span className="hash-span">&nbsp;</span>
       

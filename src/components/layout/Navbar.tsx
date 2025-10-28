@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { styles } from "../../constants/styles";
 import { navLinks } from "../../constants";
@@ -10,6 +10,34 @@ const Navbar = () => {
   const [active, setActive] = useState<string | null>();
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // Handle navigation to sections
+  const handleNavClick = (navId: string) => {
+    if (navId === "blog") {
+      navigate("/blog");
+    } else {
+      // If we're not on the home page, navigate to home first, then scroll to section
+      if (location.pathname !== "/") {
+        navigate("/");
+        // Wait for navigation to complete, then scroll to section
+        setTimeout(() => {
+          const element = document.getElementById(navId);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
+      } else {
+        // We're on home page, just scroll to section
+        const element = document.getElementById(navId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }
+    setToggle(false); // Close mobile menu
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,12 +105,9 @@ const Navbar = () => {
               className={`${
                 active === nav.id ? "text-white" : "text-secondary"
               } cursor-pointer text-[18px] font-medium hover:text-white`}
+              onClick={() => handleNavClick(nav.id)}
             >
-              {nav.id === "blog" ? (
-                <Link to="/blog">{nav.title}</Link>
-              ) : (
-                <a href={`#${nav.id}`}>{nav.title}</a>
-              )}
+              {nav.title}
             </li>
           ))}
         </ul>
@@ -107,15 +132,9 @@ const Navbar = () => {
                   className={`font-poppins cursor-pointer text-[16px] font-medium ${
                     active === nav.id ? "text-white" : "text-secondary"
                   }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                  }}
+                  onClick={() => handleNavClick(nav.id)}
                 >
-                  {nav.id === "blog" ? (
-                    <Link to="/blog">{nav.title}</Link>
-                  ) : (
-                    <a href={`#${nav.id}`}>{nav.title}</a>
-                  )}
+                  {nav.title}
                 </li>
               ))}
             </ul>

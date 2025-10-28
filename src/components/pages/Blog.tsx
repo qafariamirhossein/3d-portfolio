@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, User, ArrowLeft, Tag, Search } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
@@ -355,6 +355,8 @@ const Blog: React.FC = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     // Fetch blog posts from Strapi CMS
@@ -437,22 +439,45 @@ const Blog: React.FC = () => {
         setSelectedPost(post);
         setCurrentView('post');
       }
+    } else if (!slug) {
+      // If no slug, show the blog list
+      setCurrentView('list');
+      setSelectedPost(null);
     }
   }, [slug, posts]);
+
+  // Handle location changes (browser back/forward buttons)
+  useEffect(() => {
+    const pathSegments = location.pathname.split('/');
+    const currentSlug = pathSegments[pathSegments.length - 1];
+    
+    if (currentSlug === 'blog' || !currentSlug) {
+      // We're on the blog list page
+      setCurrentView('list');
+      setSelectedPost(null);
+    } else if (posts.length > 0) {
+      // We're on a specific blog post
+      const post = posts.find(p => p.slug === currentSlug);
+      if (post) {
+        setSelectedPost(post);
+        setCurrentView('post');
+      }
+    }
+  }, [location.pathname, posts]);
 
   const handlePostClick = (postSlug: string) => {
     const post = posts.find(p => p.slug === postSlug);
     if (post) {
       setSelectedPost(post);
       setCurrentView('post');
-      window.history.pushState({}, '', `/blog/${postSlug}`);
+      navigate(`/blog/${postSlug}`);
     }
   };
 
   const handleBackToList = () => {
     setCurrentView('list');
     setSelectedPost(null);
-    window.history.pushState({}, '', '/blog');
+    navigate('/blog');
   };
 
   return (

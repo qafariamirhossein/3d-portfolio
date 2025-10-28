@@ -195,11 +195,13 @@ class BlogApiService {
                       'Unknown Author';
     
     // Get author image/avatar
-    const authorImage = blogData.author?.data?.attributes?.avatar?.data?.attributes?.url ||
-                       blogData.author?.attributes?.avatar?.data?.attributes?.url ||
-                       blogData.author?.avatar?.data?.attributes?.url ||
-                       blogData.author?.avatar?.url ||
-                       '/me.png';
+    // const authorImage = blogData.author?.data?.attributes?.avatar?.data?.attributes?.url ||
+    //                    blogData.author?.attributes?.avatar?.data?.attributes?.url ||
+    //                    blogData.author?.avatar?.data?.attributes?.url ||
+    //                    blogData.author?.avatar?.url ||
+    //                    '/me.png';
+    
+    const authorImage = '/me.png';
     
     // Get author bio
     const authorBio = blogData.author?.data?.attributes?.bio || 
