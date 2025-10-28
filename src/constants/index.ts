@@ -51,20 +51,24 @@ export const navLinks: TNavLink[] = [
 
 const services: TService[] = [
   {
-    title: "AI Developer",
+    title: "Backend Developer",
+    icon: backend,
+  },
+  {
+    title: "Frontend Developer",
     icon: web,
   },
   {
-    title: "Web3 Developer",
+    title: "AI / AI Agents Developer",
+    icon: creator,
+  },
+  {
+    title: "Web3 / Blockchain Developer",
     icon: mobile,
   },
   {
     title: "Full Stack Developer",
-    icon: backend,
-  },
-  {
-    title: "Blockchain Developer",
-    icon: creator,
+    icon: threejs,
   },
 ];
 
@@ -121,11 +125,37 @@ const technologies: TTechnology[] = [
 
 const experiences: TExperience[] = [
   {
-    title: "AI Developer",
-    companyName: "BreakoutwithAI",
-    icon: reactjs,
+    title: "Backend Developer",
+    companyName: "TechCorp Solutions",
+    icon: nodejs,
     iconBg: "#383E56",
     date: "January 2024 - Present",
+    points: [
+      "Designed and implemented scalable RESTful APIs using Node.js, Express, and TypeScript.",
+      "Built microservices architecture with Docker containerization and Kubernetes orchestration.",
+      "Developed database schemas and optimized queries for PostgreSQL and MongoDB.",
+      "Implemented authentication and authorization systems with JWT and OAuth2 protocols.",
+    ],
+  },
+  {
+    title: "Frontend Developer",
+    companyName: "Digital Innovations",
+    icon: reactjs,
+    iconBg: "#E6DEDD",
+    date: "September 2023 - December 2023",
+    points: [
+      "Created responsive and interactive user interfaces using React, TypeScript, and Tailwind CSS.",
+      "Implemented state management solutions with Redux Toolkit and Context API.",
+      "Built reusable component libraries and maintained design system consistency.",
+      "Optimized application performance with code splitting, lazy loading, and bundle optimization.",
+    ],
+  },
+  {
+    title: "AI / AI Agents Developer",
+    companyName: "BreakoutwithAI",
+    icon: threejs,
+    iconBg: "#383E56",
+    date: "June 2023 - August 2023",
     points: [
       "Developed AI-powered learning assistants using OpenAI API and LangChain for personalized educational experiences.",
       "Built intelligent course recommendation systems with machine learning algorithms and natural language processing.",
@@ -134,11 +164,11 @@ const experiences: TExperience[] = [
     ],
   },
   {
-    title: "Web3 Developer",
+    title: "Web3 / Blockchain Developer",
     companyName: "Blockchain Solutions",
-    icon: nodejs,
+    icon: mongodb,
     iconBg: "#E6DEDD",
-    date: "June 2023 - December 2023",
+    date: "March 2023 - May 2023",
     points: [
       "Developed decentralized applications (dApps) using Solidity, Web3.js, and Ethereum smart contracts.",
       "Built tokenized betting platforms and DeFi applications with secure wallet integration and real-time data feeds.",
@@ -149,9 +179,9 @@ const experiences: TExperience[] = [
   {
     title: "Full Stack Developer",
     companyName: "Tech Innovations",
-    icon: threejs,
+    icon: git,
     iconBg: "#383E56",
-    date: "September 2022 - May 2023",
+    date: "September 2022 - February 2023",
     points: [
       "Built end-to-end web applications using React, Node.js, MongoDB, and modern development frameworks.",
       "Developed multilingual platforms with internationalization support and responsive design principles.",
@@ -185,6 +215,38 @@ const testimonials: TTestimonial[] = [
     designation: "CEO",
     company: "Tech Innovations",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
+  },
+  {
+    testimonial:
+      "Amir's backend architecture design is outstanding. He built our microservices infrastructure with Docker and Kubernetes, reducing deployment time by 60% and improving system scalability tremendously.",
+    name: "David Park",
+    designation: "Technical Lead",
+    company: "TechCorp Solutions",
+    image: "https://randomuser.me/api/portraits/men/8.jpg",
+  },
+  {
+    testimonial:
+      "Amir delivered a beautiful, responsive frontend that our users rave about. His expertise in React and TypeScript, combined with his eye for detail, created an exceptional user experience.",
+    name: "Lisa Thompson",
+    designation: "Design Director",
+    company: "Digital Innovations",
+    image: "https://randomuser.me/api/portraits/women/8.jpg",
+  },
+  {
+    testimonial:
+      "Amir is a brilliant developer with deep knowledge across the entire stack. He helped us build robust authentication systems and database optimizations that improved our performance by 40%. Highly recommended!",
+    name: "James Wilson",
+    designation: "Engineering Manager",
+    company: "TechCorp Solutions",
+    image: "https://randomuser.me/api/portraits/men/10.jpg",
+  },
+  {
+    testimonial:
+      "Amir's React expertise and state management skills are top-notch. He transformed our legacy application into a modern, maintainable codebase with Redux Toolkit and made our team's workflow much more efficient.",
+    name: "Alexandra Kim",
+    designation: "Frontend Lead",
+    company: "Digital Innovations",
+    image: "https://randomuser.me/api/portraits/women/10.jpg",
   },
 ];
 

@@ -4,6 +4,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Swiper Custom Styles */
+.testimonials-swiper .swiper-pagination-bullet-custom {
+  width: 8px;
+  height: 8px;
+  background: #6b7280;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.testimonials-swiper .swiper-pagination-bullet-active-custom {
+  width: 32px;
+  background: #3b82f6;
+  border-radius: 4px;
+}
+
+.testimonials-swiper .swiper-button-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
 * {
   margin: 0;
   padding: 0;
