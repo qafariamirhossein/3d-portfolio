@@ -40,13 +40,13 @@ type TConfig = {
 
 export const config: TConfig = {
   html: {
-    title: "Amir Qafari — Portfolio",
+    title: "Amir Qafari — Full-Stack Developer",
     fullName: "Amir Qafari",
     email: "qafariamirhossein@gmail.com",
   },
   hero: {
     name: "Amir Qafari",
-    p: ["I develop 3D visuals, user", "interfaces and web applications"],
+    p: ["I develop AI-powered applications", "and Web3 solutions with modern tech"],
   },
   contact: {
     p: "Get in touch",
@@ -67,7 +67,7 @@ export const config: TConfig = {
     about: {
       p: "Introduction",
       h2: "Overview.",
-      content: `I'm Amir Qafari, a passionate software developer with expertise in modern web technologies including TypeScript, JavaScript, React, and Three.js. I specialize in creating immersive 3D web experiences and user interfaces that combine functionality with stunning visual appeal. With a strong foundation in full-stack development, I bring ideas to life through clean, efficient code and innovative solutions. Let's collaborate to build something extraordinary together!`,
+      content: `I'm Amir Qafari, a passionate full-stack developer specializing in AI-powered applications and Web3 solutions. With expertise in modern technologies including TypeScript, React, Node.js, and blockchain development, I create innovative solutions that bridge the gap between artificial intelligence and decentralized technologies. My experience spans from building intelligent AI assistants and machine learning platforms to developing smart contracts and DeFi applications. I'm dedicated to pushing the boundaries of what's possible with technology, creating seamless user experiences that combine cutting-edge AI capabilities with robust Web3 infrastructure.`,
     },
     experience: {
       p: "What I have done so far",
@@ -80,11 +80,12 @@ export const config: TConfig = {
     works: {
       p: "My work",
       h2: "Projects.",
-      content: `Following projects showcases my skills and experience through
-    real-world examples of my work. Each project is briefly described with
-    links to code repositories and live demos in it. It reflects my
-    ability to solve complex problems, work with different technologies,
-    and manage projects effectively.`,
+      content: `Following projects showcase my expertise in AI development and Web3 solutions through
+    real-world examples of my work. Each project demonstrates my ability to integrate
+    artificial intelligence with modern web technologies, build decentralized applications,
+    and create innovative solutions that solve complex problems. From AI-powered learning
+    platforms to blockchain-based betting systems, these projects reflect my passion for
+    cutting-edge technology and creative problem-solving.`,
     },
   },
 };

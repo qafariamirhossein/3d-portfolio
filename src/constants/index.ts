@@ -51,11 +51,11 @@ export const navLinks: TNavLink[] = [
 
 const services: TService[] = [
   {
-    title: "3D Web Developer",
+    title: "AI Developer",
     icon: web,
   },
   {
-    title: "React Developer",
+    title: "Web3 Developer",
     icon: mobile,
   },
   {
@@ -63,104 +63,100 @@ const services: TService[] = [
     icon: backend,
   },
   {
-    title: "UI/UX Designer",
+    title: "Blockchain Developer",
     icon: creator,
   },
 ];
 
 const technologies: TTechnology[] = [
   {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
     name: "TypeScript",
     icon: typescript,
   },
   {
-    name: "React JS",
+    name: "React",
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
+    name: "Node.js",
+    icon: nodejs,
+  },
+  {
+    name: "Python",
+    icon: javascript,
+  },
+  {
+    name: "Solidity",
+    icon: html,
+  },
+  {
+    name: "Web3.js",
+    icon: css,
+  },
+  {
+    name: "TensorFlow",
     icon: redux,
   },
   {
-    name: "Tailwind CSS",
+    name: "OpenAI API",
     icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
   },
   {
     name: "MongoDB",
     icon: mongodb,
   },
   {
-    name: "Three JS",
+    name: "Three.js",
     icon: threejs,
   },
   {
-    name: "git",
+    name: "Git",
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
+    name: "Docker",
     icon: docker,
   },
 ];
 
 const experiences: TExperience[] = [
   {
-    title: "Frontend Developer",
-    companyName: "Tech Solutions Inc.",
+    title: "AI Developer",
+    companyName: "BreakoutwithAI",
     icon: reactjs,
     iconBg: "#383E56",
-    date: "June 2021 - December 2022",
+    date: "January 2024 - Present",
     points: [
-      "Developed responsive web applications using React.js, TypeScript, and modern CSS frameworks.",
-      "Implemented 3D visualizations using Three.js for interactive user experiences.",
-      "Collaborated with UI/UX designers to create pixel-perfect, accessible interfaces.",
-      "Optimized application performance and implemented best practices for code quality.",
+      "Developed AI-powered learning assistants using OpenAI API and LangChain for personalized educational experiences.",
+      "Built intelligent course recommendation systems with machine learning algorithms and natural language processing.",
+      "Created conversational AI interfaces that provide real-time learning support and automated customer service.",
+      "Integrated AI capabilities with modern web technologies including React, TypeScript, and Node.js.",
+    ],
+  },
+  {
+    title: "Web3 Developer",
+    companyName: "Blockchain Solutions",
+    icon: nodejs,
+    iconBg: "#E6DEDD",
+    date: "June 2023 - December 2023",
+    points: [
+      "Developed decentralized applications (dApps) using Solidity, Web3.js, and Ethereum smart contracts.",
+      "Built tokenized betting platforms and DeFi applications with secure wallet integration and real-time data feeds.",
+      "Implemented smart contract security best practices and conducted comprehensive testing and auditing.",
+      "Created user-friendly interfaces for complex blockchain interactions and cryptocurrency trading.",
     ],
   },
   {
     title: "Full Stack Developer",
-    companyName: "Digital Innovations",
-    icon: nodejs,
-    iconBg: "#E6DEDD",
-    date: "January 2023 - August 2023",
-    points: [
-      "Built end-to-end web applications using React, Node.js, and MongoDB.",
-      "Created RESTful APIs and integrated third-party services for enhanced functionality.",
-      "Implemented real-time features using WebSocket connections and state management.",
-      "Mentored junior developers and conducted code reviews to maintain high standards.",
-    ],
-  },
-  {
-    title: "3D Web Developer",
-    companyName: "Creative Studio",
+    companyName: "Tech Innovations",
     icon: threejs,
     iconBg: "#383E56",
-    date: "September 2023 - Present",
+    date: "September 2022 - May 2023",
     points: [
-      "Specialized in creating immersive 3D web experiences using Three.js and React Three Fiber.",
-      "Developed interactive 3D portfolios and product showcases for various clients.",
-      "Integrated 3D models and animations with responsive web design principles.",
-      "Explored cutting-edge web technologies including WebGL and advanced shader programming.",
+      "Built end-to-end web applications using React, Node.js, MongoDB, and modern development frameworks.",
+      "Developed multilingual platforms with internationalization support and responsive design principles.",
+      "Implemented real-time features using WebSocket connections and advanced state management techniques.",
+      "Created scalable backend architectures with RESTful APIs and microservices design patterns.",
     ],
   },
 ];
@@ -168,26 +164,26 @@ const experiences: TExperience[] = [
 const testimonials: TTestimonial[] = [
   {
     testimonial:
-      "Amir's expertise in 3D web development is exceptional. He transformed our static website into an immersive experience that our users love.",
+      "Amir's expertise in AI development is exceptional. He built our intelligent learning assistant that increased user engagement by 300% and transformed our educational platform.",
     name: "Sarah Johnson",
     designation: "Product Manager",
-    company: "Tech Innovations",
+    company: "BreakoutwithAI",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
     testimonial:
-      "Working with Amir was a game-changer. His attention to detail and innovative approach to 3D visualization exceeded our expectations.",
+      "Working with Amir on our Web3 project was incredible. His blockchain expertise and attention to detail created a secure, user-friendly DeFi platform that exceeded all expectations.",
     name: "Michael Chen",
-    designation: "Creative Director",
-    company: "Digital Studio",
+    designation: "CTO",
+    company: "Blockchain Solutions",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
     testimonial:
-      "Amir's 3D portfolio work increased our client engagement by 300%. His technical skills and creative vision are outstanding.",
+      "Amir's full-stack development skills are outstanding. He delivered a multilingual platform with AI integration that our international users love. His technical expertise is unmatched.",
     name: "Emily Rodriguez",
     designation: "CEO",
-    company: "Creative Agency",
+    company: "Tech Innovations",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];

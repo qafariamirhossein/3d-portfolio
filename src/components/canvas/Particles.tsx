@@ -1,15 +1,14 @@
-import React, { useMemo, useCallback } from 'react';
-import { useFrame } from '@react-three/fiber';
+import React, { useMemo, Suspense } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
-import { useTheme } from '../../contexts/ThemeContext';
+import CanvasLoader from '../layout/Loader';
 
 interface ParticlesProps {
   count?: number;
+  theme?: 'dark' | 'light';
 }
 
-const Particles: React.FC<ParticlesProps> = ({ count = 2000 }) => {
-  const { theme } = useTheme();
-  
+const ParticlesComponent: React.FC<ParticlesProps> = ({ count = 2000, theme = 'dark' }) => {
   // Create particles
   const particles = useMemo(() => {
     const temp = [];
@@ -71,6 +70,19 @@ const Particles: React.FC<ParticlesProps> = ({ count = 2000 }) => {
         depthWrite={false}
       />
     </points>
+  );
+};
+
+const Particles: React.FC<ParticlesProps> = ({ count, theme }) => {
+  return (
+    <Canvas
+      camera={{ position: [0, 0, 1] }}
+      style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}
+    >
+      <Suspense fallback={<CanvasLoader />}>
+        <ParticlesComponent count={count} theme={theme} />
+      </Suspense>
+    </Canvas>
   );
 };
 
