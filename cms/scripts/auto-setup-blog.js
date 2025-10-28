@@ -7,7 +7,7 @@
  * 2. Run this script: node scripts/auto-setup-blog.js
  * 
  * Prerequisites:
- * - Strapi server running on http://localhost:1337
+ * - Strapi server running on https://thankful-books-8c2655df05.strapiapp.com
  * - Admin account created
  * - API token generated (Settings > API Tokens > Create new token)
  */
@@ -17,7 +17,7 @@ const path = require('path');
 const axios = require('axios');
 
 // Configuration
-const STRAPI_URL = 'http://localhost:1337';
+const STRAPI_URL = 'https://thankful-books-8c2655df05.strapiapp.com';
 const API_TOKEN = process.env.STRAPI_API_TOKEN || 'your-api-token-here';
 
 // Create axios instance with auth
@@ -84,6 +84,18 @@ const categoriesData = [
     slug: "developer-tools",
     description: "Productivity tools, workflows, and development environment setup",
     color: "#F59E0B"
+  },
+  {
+    name: "DevOps",
+    slug: "devops",
+    description: "DevOps practices, containerization, deployment, and infrastructure",
+    color: "#EC4899"
+  },
+  {
+    name: "Linux",
+    slug: "linux",
+    description: "Linux commands, system administration, and Unix-based systems",
+    color: "#F97316"
   }
 ];
 
@@ -266,6 +278,25 @@ const createBlogPosts = async (author, categories, tags) => {
   
   for (const blog of blogsData) {
     try {
+      // Check if blog post already exists
+      let existingBlog = null;
+      try {
+        const existingResponse = await api.get('/api/blogs', {
+          params: { filters: { slug: blog.slug } }
+        });
+        if (existingResponse.data.data && existingResponse.data.data.length > 0) {
+          existingBlog = existingResponse.data.data[0];
+        }
+      } catch (error) {
+        // Ignore error, continue to create new blog
+      }
+      
+      if (existingBlog) {
+        console.log(`⏭️  Blog post "${blog.title}" already exists, skipping...`);
+        createdBlogs.push(existingBlog);
+        continue;
+      }
+      
       // Find the category ID
       const categoryId = categories[blog.originalCategory]?.id;
       if (!categoryId) {
@@ -291,6 +322,29 @@ const createBlogPosts = async (author, categories, tags) => {
       createdBlogs.push(response.data.data);
       console.log(`✅ Blog post "${blog.title}" created`);
     } catch (error) {
+      // Check if blog already exists by slug
+      if (error.response?.status === 400) {
+        const validationErrors = error.response?.data?.error?.details?.errors || [];
+        const slugExists = validationErrors.some(err => 
+          err.path.includes('slug') && err.message.includes('unique')
+        );
+        
+        if (slugExists) {
+          console.log(`⏭️  Blog post "${blog.title}" already exists, skipping...`);
+          // Try to fetch existing blog
+          try {
+            const existingResponse = await api.get('/api/blogs', {
+              params: { filters: { slug: blog.slug } }
+            });
+            if (existingResponse.data.data && existingResponse.data.data.length > 0) {
+              createdBlogs.push(existingResponse.data.data[0]);
+            }
+          } catch (fetchError) {
+            console.warn(`⚠️  Could not fetch existing blog "${blog.title}"`);
+          }
+          continue;
+        }
+      }
       handleError(error, `creating blog post "${blog.title}"`);
     }
     await wait(200); // Small delay between requests
@@ -305,12 +359,23 @@ const publishBlogPosts = async (blogs) => {
   
   for (const blog of blogs) {
     try {
-      await api.put(`/api/blogs/${blog.id}`, {
-        data: { publishedAt: blog.attributes.publishedAt }
+      // Handle both Strapi v4 and v5 response formats
+      const blogId = blog.id || blog.data?.id;
+      const blogTitle = blog.attributes?.title || blog.data?.attributes?.title || blog.title || 'Unknown';
+      const publishedAt = blog.attributes?.publishedAt || blog.data?.attributes?.publishedAt || blog.publishedAt;
+      
+      if (!blogId) {
+        console.warn(`⚠️  Skipping blog post "${blogTitle}" - no ID found`);
+        continue;
+      }
+      
+      await api.put(`/api/blogs/${blogId}`, {
+        data: { publishedAt: publishedAt }
       });
-      console.log(`✅ Blog post "${blog.attributes.title}" published`);
+      console.log(`✅ Blog post "${blogTitle}" published`);
     } catch (error) {
-      console.warn(`⚠️  Could not publish blog post "${blog.attributes.title}":`, error.message);
+      const blogTitle = blog.attributes?.title || blog.data?.attributes?.title || blog.title || 'Unknown';
+      console.warn(`⚠️  Could not publish blog post "${blogTitle}":`, error.message);
     }
     await wait(100);
   }
@@ -339,7 +404,7 @@ const setupBlog = async () => {
       console.log('❌ Could not connect to Strapi. Make sure:');
       console.log('   1. Strapi server is running (npm run dev)');
       console.log('   2. API token is correct');
-      console.log('   3. Server is accessible at http://localhost:1337');
+      console.log('   3. Server is accessible at https://thankful-books-8c2655df05.strapiapp.com');
       return;
     }
     
