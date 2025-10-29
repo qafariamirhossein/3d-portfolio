@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://thankful-books-8c2655df05.strapiapp.com/api/:path*"
+      "destination": "https://timely-book-1ffa54b15e.strapiapp.com/api/:path*"
     },
     {
       "source": "/(.*)",

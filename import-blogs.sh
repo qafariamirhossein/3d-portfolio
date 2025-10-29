@@ -56,7 +56,7 @@ if [ $? -eq 0 ]; then
     echo "✅ Success! All blog posts have been imported."
     echo ""
     echo "Next steps:"
-    echo "1. Create .env.local with: echo 'VITE_STRAPI_URL=https://thankful-books-8c2655df05.strapiapp.com' > .env.local"
+    echo "1. Create .env.local with: echo 'VITE_STRAPI_URL=https://timely-book-1ffa54b15e.strapiapp.com' > .env.local"
     echo "2. Visit https://timely-book-1ffa54b15e.strapiapp.com/admin to see your blog posts"
     echo "3. Start your frontend: npm run dev"
     echo ""
