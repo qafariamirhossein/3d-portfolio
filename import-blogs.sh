@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Blog Import Script for Strapi CMS
-# This script will import all blog posts from src/data/blog.json into Strapi
 
 echo "🚀 Blog Import Script for Strapi CMS"
 echo "======================================"
