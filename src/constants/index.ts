@@ -22,7 +22,7 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
+  // figma,
   docker,
   threejs,
 } from "../assets";

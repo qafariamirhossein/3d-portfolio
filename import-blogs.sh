@@ -9,7 +9,7 @@ echo ""
 
 # Check if Strapi is running
 echo "📡 Checking if Strapi is running..."
-if ! curl -s https://thankful-books-8c2655df05.strapiapp.com/admin > /dev/null 2>&1; then
+if ! curl -s https://timely-book-1ffa54b15e.strapiapp.com/admin > /dev/null 2>&1; then
     echo "❌ Strapi is not running!"
     echo ""
     echo "Please start Strapi first:"
@@ -26,7 +26,7 @@ echo "🔑 Strapi API Token"
 echo "=================="
 echo ""
 echo "To create an API token:"
-echo "1. Open https://thankful-books-8c2655df05.strapiapp.com/admin in your browser"
+echo "1. Open https://timely-book-1ffa54b15e.strapiapp.com/admin in your browser"
 echo "2. Go to Settings > API Tokens"
 echo "3. Click 'Create new API Token'"
 echo "4. Set Name: 'Blog Import Token'"
@@ -57,7 +57,7 @@ if [ $? -eq 0 ]; then
     echo ""
     echo "Next steps:"
     echo "1. Create .env.local with: echo 'VITE_STRAPI_URL=https://thankful-books-8c2655df05.strapiapp.com' > .env.local"
-    echo "2. Visit https://thankful-books-8c2655df05.strapiapp.com/admin to see your blog posts"
+    echo "2. Visit https://timely-book-1ffa54b15e.strapiapp.com/admin to see your blog posts"
     echo "3. Start your frontend: npm run dev"
     echo ""
 else

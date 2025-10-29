@@ -7,7 +7,7 @@
  * 2. Run this script: node scripts/auto-setup-blog.js
  * 
  * Prerequisites:
- * - Strapi server running on https://thankful-books-8c2655df05.strapiapp.com
+ * - Strapi server running on https://timely-book-1ffa54b15e.strapiapp.com
  * - Admin account created
  * - API token generated (Settings > API Tokens > Create new token)
  */
@@ -17,7 +17,7 @@ const path = require('path');
 const axios = require('axios');
 
 // Configuration
-const STRAPI_URL = 'https://thankful-books-8c2655df05.strapiapp.com';
+const STRAPI_URL = 'https://timely-book-1ffa54b15e.strapiapp.com';
 const API_TOKEN = process.env.STRAPI_API_TOKEN || 'your-api-token-here';
 
 // Create axios instance with auth
@@ -404,7 +404,7 @@ const setupBlog = async () => {
       console.log('❌ Could not connect to Strapi. Make sure:');
       console.log('   1. Strapi server is running (npm run dev)');
       console.log('   2. API token is correct');
-      console.log('   3. Server is accessible at https://thankful-books-8c2655df05.strapiapp.com');
+      console.log('   3. Server is accessible at https://timely-book-1ffa54b15e.strapiapp.com');
       return;
     }
     
