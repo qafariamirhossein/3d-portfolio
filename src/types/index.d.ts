@@ -42,6 +42,7 @@ export type TProject = {
   role?: string;
   client?: string;
   year?: string;
+  order?: number;
 } & Required<Pick<TCommonProps, "name">>;
 
 export type TTechnology = Required<Omit<TCommonProps, "title">>;

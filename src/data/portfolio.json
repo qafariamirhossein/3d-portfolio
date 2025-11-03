@@ -62,7 +62,8 @@
       "teamSize": "1",
       "role": "AI Engineer",
       "client": "BreakoutwithAI",
-      "year": "2025"
+      "year": "2025",
+      "order": 9999
     },
     {
       "id": "alavi-academy-platform",
@@ -130,7 +131,8 @@
       "teamSize": "1",
       "role": "Fullstack Developer",
       "client": "Alavi Academy",
-      "year": "2025"
+      "year": "2025",
+      "order": 9999
     },
     {
       "id": "animercial-3d-portfolio",
@@ -201,7 +203,8 @@
       "teamSize": "1",
       "role": "3D Frontend Developer",
       "client": "Creative Agency",
-      "year": "2025"
+      "year": "2025",
+      "order": 3
     },
     {
       "id": "breakoutwithai-platform",
@@ -269,7 +272,8 @@
       "teamSize": "1",
       "role": "Fullstack Developer",
       "client": "BreakoutwithAI",
-      "year": "2025"
+      "year": "2025",
+      "order": 2
     },
     {
       "id": "eurocup-sports-bet",
@@ -336,7 +340,8 @@
       "teamSize": "2",
       "role": "Lead Developer",
       "client": "Sports Betting Corp",
-      "year": "2025"
+      "year": "2025",
+      "order": 6
     },
     {
       "id": "apegun-3d-marketing",
@@ -404,7 +409,8 @@
       "teamSize": "1",
       "role": "3D Web Developer",
       "client": "Ape Token Community",
-      "year": "2025"
+      "year": "2025",
+      "order": 5
     },
     {
       "id": "breakout-fashion-ai",
@@ -475,7 +481,8 @@
       "teamSize": "2",
       "role": "AI Developer",
       "client": "Fashion Tech Inc.",
-      "year": "2025"
+      "year": "2025",
+      "order": 6
     },
     {
       "id": "marketing-ava-ai",
@@ -536,7 +543,8 @@
       "teamSize": "1",
       "role": "AI Developer",
       "client": "Marketing Solutions Inc.",
-      "year": "2025"
+      "year": "2025",
+      "order": 9999
     },
     {
       "id": "ai-nft-generator",
@@ -605,7 +613,8 @@
       "teamSize": "1",
       "role": "AI Developer",
       "client": "NFT Art Collective",
-      "year": "2025"
+      "year": "2025",
+      "order": 4
     },
     {
       "id": "buy-bot-automation",
@@ -675,7 +684,8 @@
       "teamSize": "2",
       "role": "Lead Developer",
       "client": "Trading Solutions Inc.",
-      "year": "2024"
+      "year": "2024",
+      "order": 9999
     },
     {
       "id": "twitter-data-collection",
@@ -745,7 +755,8 @@
       "teamSize": "3",
       "role": "Data Engineer",
       "client": "Social Media Research Lab",
-      "year": "2024"
+      "year": "2024",
+      "order": 9999
     },
     {
       "id": "dev-discuss-community",
@@ -819,7 +830,8 @@
       "teamSize": "4",
       "role": "Full Stack Developer",
       "client": "Developer Community",
-      "year": "2024"
+      "year": "2024",
+      "order": 9999
     }
   ]
 }

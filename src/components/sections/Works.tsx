@@ -175,6 +175,7 @@ const Works = () => {
     }, 500);
   };
 
+  // Projects are already sorted by order in constants/index.ts
   const displayedProjects = projects.slice(0, visibleProjects);
   const hasMoreProjects = visibleProjects < projects.length;
 

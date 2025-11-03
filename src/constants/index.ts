@@ -273,6 +273,13 @@ const projects: TProject[] = portfolioData.portfolios.map(portfolio => ({
   role: portfolio.role,
   client: portfolio.client,
   year: portfolio.year,
-}));
+  order: portfolio.order,
+}))
+.sort((a, b) => {
+  // Sort by order field: 1 at top, 9999 at end, undefined defaults to 9999
+  const orderA = a.order ?? 9999;
+  const orderB = b.order ?? 9999;
+  return orderA - orderB;
+});
 
 export { services, technologies, experiences, testimonials, projects };
