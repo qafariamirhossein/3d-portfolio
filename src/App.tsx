@@ -5,7 +5,7 @@ import {
   PortfolioDetails,
   Home,
   Blog,
-  ThemeToggle,
+  // ThemeToggle,
 } from "./components";
 import { useEffect } from "react";
 import { config } from "./constants/config";
@@ -27,7 +27,7 @@ const App = () => {
           <Route path="/blog/:slug" element={<Blog />} />
           <Route path="/portfolio/:id" element={<PortfolioDetails />} />
         </Routes>
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
       </div>
     </BrowserRouter>
   );

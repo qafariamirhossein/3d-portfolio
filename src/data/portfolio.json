@@ -412,13 +412,19 @@
       "description": "Revolutionary AI-powered virtual try-on platform that allows users to visualize different outfits using computer vision and generative AI. Enables realistic clothing simulation for e-commerce and virtual worlds.",
       "detailedDescription": "Breakout Fashion represents the future of online shopping and virtual fashion, combining cutting-edge AI technology with intuitive user interfaces to create realistic virtual try-on experiences. The platform allows users to upload photos or 3D character models and instantly visualize how different outfits would look on them. Using advanced computer vision and generative AI, the system provides realistic cloth simulation and accurate fitting, enabling users to make confident purchasing decisions. The platform is designed for both individual consumers and e-commerce businesses, offering seamless integration with existing online stores. The technology behind Breakout Fashion pushes the boundaries of what's possible in virtual fashion, creating experiences that are both practical and engaging.",
       "shortDescription": "AI-powered virtual try-on platform with realistic clothing simulation",
-      "image": "/portfolio/images/marketing-ava-1.png",
+      "image": "/portfolio/images/fashion-factory-1.png",
       "gallery": [
-        "/portfolio/images/marketing-ava-1.png",
-        "/portfolio/images/marketing-ava-2.png",
-        "/portfolio/images/marketing-ava-3.png"
+        "/portfolio/images/fashion-factory-1.png",
+        "/portfolio/images/fashion-factory-2.png",
+        "/portfolio/images/fashion-factory-3.png",
+        "/portfolio/images/fashion-factory-4.png",
+        "/portfolio/images/fashion-factory-5.png",
+        "/portfolio/images/fashion-factory-6.png",
+        "/portfolio/images/fashion-factory-7.png",
+        "/portfolio/images/fashion-factory-8.png",
+        "/portfolio/images/fashion-factory-9.png"
       ],
-      "video": "/portfolio/videos/breakout-fashion-demo.mp4",
+      "video": "/portfolio/videos/fashion-factory1.mp4",
       "liveDemoLink": "https://breakout-fashion-demo.com",
       "sourceCodeLink": "https://github.com/amirqafari/breakout-fashion",
       "technologies": [
@@ -426,9 +432,7 @@
         "TensorFlow.js",
         "OpenAI",
         "Tailwind CSS",
-        "FastAPI",
-        "Python",
-        "OpenCV"
+        "FastAPI"
       ],
       "tags": [
         {
@@ -446,13 +450,10 @@
       ],
       "features": [
         "AI-powered outfit try-on system",
-        "User upload interface for images and 3D avatars",
+        "User upload interface (images/3D avatars)",
         "Virtual wardrobe and outfit generator",
-        "Realistic cloth simulation technology",
-        "E-commerce integration capabilities",
-        "Real-time processing and visualization",
-        "Multiple clothing categories and styles",
-        "Mobile-optimized interface"
+        "Realistic cloth simulation",
+        "E-commerce-ready product linking"
       ],
       "challenges": [
         "Implementing accurate body detection and fitting",
@@ -466,7 +467,7 @@
         "Optimized TensorFlow.js for browser performance",
         "Created robust image preprocessing pipeline"
       ],
-      "duration": "3 months",
+      "duration": "August – October 2025",
       "teamSize": "2",
       "role": "AI Developer",
       "client": "Fashion Tech Inc.",

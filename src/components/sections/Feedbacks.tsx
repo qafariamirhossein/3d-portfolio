@@ -47,7 +47,7 @@ const Feedbacks = () => {
       >
         <Header useMotion={true} {...config.sections.feedbacks} />
       </div>
-      <div className={`${styles.paddingX} -mt-20 pb-14 relative`}>
+      <div className={`${styles.paddingX} -mt-20 relative`}>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={28}
