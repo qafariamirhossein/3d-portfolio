@@ -50,7 +50,7 @@ const ProjectCard: React.FC<{ index: number } & TProject & { onViewDetails: (pro
         glareColor="#aaa6c3"
       >
         <div 
-          className="bg-tertiary w-full sm:w-[300px] rounded-2xl p-5 relative overflow-hidden group"
+          className="bg-tertiary w-full sm:w-[355px] rounded-2xl p-5 relative overflow-hidden group"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
