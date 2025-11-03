@@ -91,6 +91,26 @@ const PortfolioDetails: React.FC = () => {
           </div>
 
           <div className="p-6 space-y-6">
+            {/* Additional Videos */}
+            {project.additionalVideos && project.additionalVideos.length > 0 && (
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-3">Additional Videos</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {project.additionalVideos.map((videoUrl, index) => (
+                    <video
+                      key={index}
+                      className="w-full h-48 md:h-64 object-cover rounded-lg"
+                      controls
+                      poster={project.image}
+                    >
+                      <source src={videoUrl} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Gallery */}
             {project.gallery && project.gallery.length > 1 && (
               <div>

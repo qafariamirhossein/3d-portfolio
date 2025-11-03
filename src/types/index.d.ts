@@ -30,6 +30,7 @@ export type TProject = {
   image: string;
   gallery?: string[];
   video?: string;
+  additionalVideos?: string[];
   liveDemoLink?: string;
   sourceCodeLink: string;
   technologies?: string[];

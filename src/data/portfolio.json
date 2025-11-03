@@ -425,7 +425,11 @@
         "/portfolio/images/fashion-factory-9.png"
       ],
       "video": "/portfolio/videos/fashion-factory1.mp4",
-      "liveDemoLink": "https://breakout-fashion-demo.com",
+      "additionalVideos": [
+        "/portfolio/videos/fashion-factory2.mp4",
+        "/portfolio/videos/fashion-factory3.mp4"
+      ],
+      "liveDemoLink": "https://fashion.breakoutwithai.com",
       "sourceCodeLink": "https://github.com/qafariamirhossein/breakout-fashion",
       "technologies": [
         "Next.js",

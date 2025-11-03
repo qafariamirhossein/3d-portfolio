@@ -261,6 +261,7 @@ const projects: TProject[] = portfolioData.portfolios.map(portfolio => ({
   image: portfolio.image,
   gallery: portfolio.gallery,
   video: portfolio.video,
+  additionalVideos: portfolio.additionalVideos,
   liveDemoLink: portfolio.liveDemoLink,
   sourceCodeLink: portfolio.sourceCodeLink,
   technologies: portfolio.technologies,
