@@ -62,7 +62,7 @@ const PortfolioDetailsModal: React.FC<PortfolioDetailsModalProps> = ({
                 <div className="relative">
                   {project.video ? (
                     <video
-                      className="w-full h-64 object-cover rounded-lg"
+                      className="w-full h-64 object-contain rounded-lg bg-black"
                       controls
                       poster={project.image}
                     >
@@ -86,7 +86,7 @@ const PortfolioDetailsModal: React.FC<PortfolioDetailsModalProps> = ({
                       {project.additionalVideos.map((videoUrl, index) => (
                         <video
                           key={index}
-                          className="w-full h-48 md:h-64 object-cover rounded-lg"
+                          className="w-full h-48 md:h-64 object-contain rounded-lg bg-black"
                           controls
                           poster={project.image}
                         >

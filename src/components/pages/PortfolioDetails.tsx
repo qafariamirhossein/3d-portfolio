@@ -74,7 +74,7 @@ const PortfolioDetails: React.FC = () => {
           <div className="relative">
             {project.video ? (
               <video
-                className="w-full h-64 md:h-96 object-cover"
+                className="w-full h-64 md:h-96 object-contain bg-black"
                 controls
                 poster={project.image}
               >
@@ -99,7 +99,7 @@ const PortfolioDetails: React.FC = () => {
                   {project.additionalVideos.map((videoUrl, index) => (
                     <video
                       key={index}
-                      className="w-full h-48 md:h-64 object-cover rounded-lg"
+                      className="w-full h-48 md:h-64 object-contain rounded-lg bg-black"
                       controls
                       poster={project.image}
                     >
