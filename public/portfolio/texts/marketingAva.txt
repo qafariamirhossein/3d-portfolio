@@ -1,0 +1,25 @@
+### 📢 Project: **Marketing Ava**
+
+🧩 **Subject:**
+AI-driven autonomous marketing agent for social media growth and engagement.
+
+📄 **Description:**
+Marketing Ava is an intelligent automation tool that promotes products, tokens, or brands on Twitter (X) through AI-driven interactions. It uses natural language generation and behavioral simulation to create engaging posts, reply to trending discussions, follow relevant accounts, and optimize visibility—automating the social marketing process end-to-end.
+
+🔧 **Features:**
+
+* Autonomous AI agent for Twitter marketing
+* Smart posting, commenting, liking, and following
+* Context-aware content generation (Eliza-style persona)
+* Campaign management and analytics dashboard
+* Product/token awareness automation
+
+🧑‍💻 **Role:**
+AI Developer – Designed and implemented the Eliza-based conversational engine and automated Twitter marketing logic.
+
+🧪 **Stack:**
+Python · Eliza · Tweepy · OpenAI API · FastAPI
+
+📆 **Duration:**
+June – August 2025
+

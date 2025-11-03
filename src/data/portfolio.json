@@ -12,7 +12,7 @@
       ],
       "video": "/portfolio/videos/agentc1.mp4",
       "liveDemoLink": "https://agentc-demo.breakoutwithai.com",
-      "sourceCodeLink": "https://github.com/amirqafari/agentc",
+      "sourceCodeLink": "https://github.com/qafariamirhossein/agentc",
       "technologies": [
         "Next.js",
         "TypeScript",
@@ -80,7 +80,7 @@
       ],
       "video": "/portfolio/videos/alavi-academy1.mp4",
       "liveDemoLink": "https://alavi-academy.com",
-      "sourceCodeLink": "https://github.com/amirqafari/alavi-academy",
+      "sourceCodeLink": "https://github.com/qafariamirhossein/alavi-academy",
       "technologies": [
         "Vite.js",
         "React",
@@ -151,7 +151,7 @@
       ],
       "video": "/portfolio/videos/animercial-demo.mp4",
       "liveDemoLink": "https://animercial-demo.com",
-      "sourceCodeLink": "https://github.com/amirqafari/animercial",
+      "sourceCodeLink": "https://github.com/qafariamirhossein/animercial",
       "technologies": [
         "Next.js",
         "Three.js",
@@ -219,7 +219,7 @@
       ],
       "video": "/portfolio/videos/breakout-with-ai1.mp4",
       "liveDemoLink": "https://breakoutwithai.com",
-      "sourceCodeLink": "https://github.com/amirqafari/breakoutwithai",
+      "sourceCodeLink": "https://github.com/qafariamirhossein/breakoutwithai",
       "technologies": [
         "Next.js",
         "Tailwind CSS",
@@ -286,7 +286,7 @@
       ],
       "video": "/portfolio/videos/eurocup-sport-bet.mp4",
       "liveDemoLink": "https://eurocup-bet-demo.com",
-      "sourceCodeLink": "https://github.com/amirqafari/eurocup-sports-bet",
+      "sourceCodeLink": "https://github.com/qafariamirhossein/eurocup-sports-bet",
       "technologies": [
         "Next.js",
         "TypeScript",
@@ -354,7 +354,7 @@
       ],
       "video": "/portfolio/videos/apegun-demo.mp4",
       "liveDemoLink": "https://apegun-demo.com",
-      "sourceCodeLink": "https://github.com/amirqafari/apegun",
+      "sourceCodeLink": "https://github.com/qafariamirhossein/apegun",
       "technologies": [
         "Next.js",
         "Three.js",
@@ -426,7 +426,7 @@
       ],
       "video": "/portfolio/videos/fashion-factory1.mp4",
       "liveDemoLink": "https://breakout-fashion-demo.com",
-      "sourceCodeLink": "https://github.com/amirqafari/breakout-fashion",
+      "sourceCodeLink": "https://github.com/qafariamirhossein/breakout-fashion",
       "technologies": [
         "Next.js",
         "TensorFlow.js",
@@ -474,6 +474,67 @@
       "year": "2025"
     },
     {
+      "id": "marketing-ava-ai",
+      "name": "Marketing Ava - AI Autonomous Marketing Agent",
+      "description": "An intelligent automation tool that promotes products, tokens, or brands on Twitter (X) through AI-driven interactions. Uses natural language generation and behavioral simulation to automate social marketing end-to-end.",
+      "detailedDescription": "Marketing Ava represents the future of autonomous social media marketing, combining advanced AI capabilities with intelligent automation to revolutionize how brands and products are promoted on Twitter (X). The platform uses natural language generation and behavioral simulation to create engaging posts, intelligently reply to trending discussions, follow relevant accounts, and optimize visibility automatically. Built with an Eliza-based conversational engine, Marketing Ava can maintain context-aware interactions that feel natural and engaging. The system includes comprehensive campaign management tools and analytics dashboards, allowing users to track performance, optimize strategies, and scale their social media presence efficiently. The platform's product/token awareness automation ensures that all interactions are relevant and aligned with marketing objectives.",
+      "shortDescription": "AI-driven autonomous marketing agent for social media growth and engagement",
+      "image": "/portfolio/images/marketing-ava-1.png",
+      "gallery": [
+        "/portfolio/images/marketing-ava-1.png",
+        "/portfolio/images/marketing-ava-2.png",
+        "/portfolio/images/marketing-ava-3.png"
+      ],
+      "video": "/portfolio/videos/marketing-ava-demo.mp4",
+      "liveDemoLink": "https://marketing-ava-demo.com",
+      "sourceCodeLink": "https://github.com/qafariamirhossein/marketing-ava",
+      "technologies": [
+        "Python",
+        "Eliza",
+        "Tweepy",
+        "OpenAI API",
+        "FastAPI"
+      ],
+      "tags": [
+        {
+          "name": "ai",
+          "color": "blue-text-gradient"
+        },
+        {
+          "name": "automation",
+          "color": "green-text-gradient"
+        },
+        {
+          "name": "social-media",
+          "color": "pink-text-gradient"
+        }
+      ],
+      "features": [
+        "Autonomous AI agent for Twitter marketing",
+        "Smart posting, commenting, liking, and following",
+        "Context-aware content generation (Eliza-style persona)",
+        "Campaign management and analytics dashboard",
+        "Product/token awareness automation"
+      ],
+      "challenges": [
+        "Creating natural-sounding AI-generated content",
+        "Implementing behavioral simulation that appears authentic",
+        "Managing Twitter API rate limits",
+        "Ensuring context-aware interactions"
+      ],
+      "solutions": [
+        "Developed Eliza-based conversational engine for natural interactions",
+        "Implemented intelligent scheduling and rate limiting systems",
+        "Used OpenAI API for context-aware content generation",
+        "Created robust campaign management system with analytics"
+      ],
+      "duration": "June – August 2025",
+      "teamSize": "1",
+      "role": "AI Developer",
+      "client": "Marketing Solutions Inc.",
+      "year": "2025"
+    },
+    {
       "id": "ai-nft-generator",
       "name": "AI NFT Generator - Creative Art Platform",
       "description": "An innovative AI-powered platform for generating unique NFT artwork using advanced machine learning models. Features both dark and light themes with comprehensive gallery management and minting capabilities.",
@@ -490,7 +551,7 @@
       ],
       "video": "/portfolio/videos/ai-nft-generator-demo.mp4",
       "liveDemoLink": "https://ai-nft-generator-demo.com",
-      "sourceCodeLink": "https://github.com/amirqafari/ai-nft-generator",
+      "sourceCodeLink": "https://github.com/qafariamirhossein/ai-nft-generator",
       "technologies": [
         "Next.js",
         "TensorFlow.js",
@@ -559,7 +620,7 @@
       ],
       "video": "/portfolio/videos/buy-bot-demo.mp4",
       "liveDemoLink": "https://buy-bot-demo.com",
-      "sourceCodeLink": "https://github.com/amirqafari/buy-bot",
+      "sourceCodeLink": "https://github.com/qafariamirhossein/buy-bot",
       "technologies": [
         "Python",
         "FastAPI",
@@ -629,7 +690,7 @@
       ],
       "video": "/portfolio/videos/twitter-analytics-demo.mp4",
       "liveDemoLink": "https://twitter-analytics-demo.com",
-      "sourceCodeLink": "https://github.com/amirqafari/twitter-data-collection",
+      "sourceCodeLink": "https://github.com/qafariamirhossein/twitter-data-collection",
       "technologies": [
         "Python",
         "FastAPI",
@@ -703,7 +764,7 @@
       ],
       "video": "/portfolio/videos/dev-discuss-demo.mp4",
       "liveDemoLink": "https://devdiscuss.com",
-      "sourceCodeLink": "https://github.com/amirqafari/dev-discuss",
+      "sourceCodeLink": "https://github.com/qafariamirhossein/dev-discuss",
       "technologies": [
         "Next.js",
         "Node.js",
