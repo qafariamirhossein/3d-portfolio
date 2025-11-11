@@ -15,6 +15,7 @@ import Feedbacks from "./sections/Feedbacks";
 import Contact from "./sections/Contact";
 import CanvasLoader from "./layout/Loader";
 import ThemeToggle from "./atoms/ThemeToggle";
+import GithubFloatButton from "./atoms/GithubFloatButton";
 import { PortfolioDetails, Home, Blog } from "./pages";
 
 export {
@@ -32,6 +33,7 @@ export {
   ComputersCanvas,
   StarsCanvas,
   ThemeToggle,
+  GithubFloatButton,
   PortfolioDetails,
   Home,
   Blog,

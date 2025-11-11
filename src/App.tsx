@@ -5,6 +5,7 @@ import {
   PortfolioDetails,
   Home,
   Blog,
+  GithubFloatButton,
   // ThemeToggle,
 } from "./components";
 import { useEffect } from "react";
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/blog/:slug" element={<Blog />} />
           <Route path="/portfolio/:id" element={<PortfolioDetails />} />
         </Routes>
+        <GithubFloatButton />
         {/* <ThemeToggle /> */}
       </div>
     </BrowserRouter>
