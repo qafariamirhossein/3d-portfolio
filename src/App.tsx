@@ -6,6 +6,7 @@ import {
   Home,
   Blog,
   GithubFloatButton,
+  LinkedInFloatButton,
   // ThemeToggle,
 } from "./components";
 import { useEffect } from "react";
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/portfolio/:id" element={<PortfolioDetails />} />
         </Routes>
         <GithubFloatButton />
+        <LinkedInFloatButton />
         {/* <ThemeToggle /> */}
       </div>
     </BrowserRouter>

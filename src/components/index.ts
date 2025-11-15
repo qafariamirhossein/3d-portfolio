@@ -16,6 +16,7 @@ import Contact from "./sections/Contact";
 import CanvasLoader from "./layout/Loader";
 import ThemeToggle from "./atoms/ThemeToggle";
 import GithubFloatButton from "./atoms/GithubFloatButton";
+import LinkedInFloatButton from "./atoms/LinkedInFloatButton";
 import { PortfolioDetails, Home, Blog } from "./pages";
 
 export {
@@ -34,6 +35,7 @@ export {
   StarsCanvas,
   ThemeToggle,
   GithubFloatButton,
+  LinkedInFloatButton,
   PortfolioDetails,
   Home,
   Blog,
