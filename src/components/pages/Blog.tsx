@@ -358,9 +358,13 @@ const BlogPost: React.FC<{ post: BlogPost; onBack: () => void }> = ({ post, onBa
       <div className="mt-12 p-6 bg-gray-800 rounded-2xl">
         <div className="flex items-center gap-4">
           <img
-            src={post.authorImage}
+            src={post.authorImage || '/me/amir-qafari-.jpg'}
             alt={post.author}
-            className="w-16 h-16 rounded-full object-cover"
+            className="w-16 h-16 rounded-full object-cover hover:scale-110 transition-transform duration-300 cursor-pointer"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = '/me/amir-qafari-.jpg';
+            }}
           />
           <div>
             <h3 className="text-xl font-bold text-white mb-2">{post.author}</h3>
