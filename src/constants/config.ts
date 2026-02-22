@@ -40,13 +40,13 @@ type TConfig = {
 
 export const config: TConfig = {
   html: {
-    title: "Amir Qafari — Full-Stack Developer",
+    title: "Amir Qafari | Full-Stack Developer - React, Node.js, TypeScript, AI & Web3",
     fullName: "Amir Qafari",
     email: "qafariamirhossein@gmail.com",
   },
   hero: {
     name: "Amir Qafari",
-    p: ["I develop AI-powered applications", "and Web3 solutions with modern tech"],
+    p: ["I build scalable full-stack applications", "with AI integration and modern web technologies"],
   },
   contact: {
     p: "Get in touch",
@@ -67,7 +67,7 @@ export const config: TConfig = {
     about: {
       p: "Introduction",
       h2: "Overview.",
-      content: `I'm Amir Qafari, a passionate full-stack developer specializing in AI-powered applications and Web3 solutions. With expertise in modern technologies including TypeScript, React, Node.js, and blockchain development, I create innovative solutions that bridge the gap between artificial intelligence and decentralized technologies. My experience spans from building intelligent AI assistants and machine learning platforms to developing smart contracts and DeFi applications. I'm dedicated to pushing the boundaries of what's possible with technology, creating seamless user experiences that combine cutting-edge AI capabilities with robust Web3 infrastructure.`,
+      content: `I'm a skilled Full-Stack Developer with expertise in building modern, scalable web applications from concept to deployment. My technical stack includes React, Next.js, TypeScript, Node.js, Python, and PostgreSQL for backend development. I specialize in creating responsive frontends with Tailwind CSS and Three.js for immersive 3D experiences, while building robust APIs and microservices on the backend. My experience extends to AI/ML integration using OpenAI, LangChain, and TensorFlow, as well as Web3 development with Solidity and ethers.js. I'm passionate about clean code architecture, CI/CD pipelines, and delivering high-performance applications that solve real business problems.`,
     },
     experience: {
       p: "What I have done so far",
@@ -80,12 +80,7 @@ export const config: TConfig = {
     works: {
       p: "My work",
       h2: "Projects.",
-      content: `Following projects showcase my expertise in AI development and Web3 solutions through
-    real-world examples of my work. Each project demonstrates my ability to integrate
-    artificial intelligence with modern web technologies, build decentralized applications,
-    and create innovative solutions that solve complex problems. From AI-powered learning
-    platforms to blockchain-based betting systems, these projects reflect my passion for
-    cutting-edge technology and creative problem-solving.`,
+      content: `Explore my portfolio of full-stack applications showcasing expertise across the entire development lifecycle. Each project demonstrates proficiency in frontend frameworks like React and Next.js, backend technologies including Node.js and Python, database design with PostgreSQL and MongoDB, and cloud deployment on AWS and Vercel. From AI-powered SaaS platforms to decentralized Web3 applications, these projects highlight my ability to architect scalable solutions, implement secure authentication systems, optimize performance, and deliver exceptional user experiences.`,
     },
   },
 };
