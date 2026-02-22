@@ -11,6 +11,7 @@ import { config } from "../../constants/config";
 import { Header } from "../atoms/Header";
 import { TProject } from "../../types";
 import { styles } from "../../constants/styles";
+import { trackEvent } from "../../utils/analytics";
 
 const ProjectCard: React.FC<{ index: number } & TProject & { onViewDetails: (projectId: string) => void }> = ({
   index,
@@ -84,6 +85,7 @@ const ProjectCard: React.FC<{ index: number } & TProject & { onViewDetails: (pro
                     href={liveDemoLink}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackEvent('Portfolio', 'Click Live Demo', name)}
                     className="flex items-center space-x-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
                   >
                     <ExternalLink className="w-4 h-4" />
@@ -111,6 +113,7 @@ const ProjectCard: React.FC<{ index: number } & TProject & { onViewDetails: (pro
                     href={liveDemoLink}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackEvent('Portfolio', 'Click Live Demo', name)}
                     className="flex items-center space-x-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
                   >
                     <ExternalLink className="w-4 h-4" />
@@ -123,7 +126,10 @@ const ProjectCard: React.FC<{ index: number } & TProject & { onViewDetails: (pro
             {/* Original GitHub Link (always visible) */}
             <div className="card-img_hover absolute inset-0 m-3 flex justify-end">
               <div
-                onClick={() => window.open(sourceCodeLink, "_blank")}
+                onClick={() => {
+                  trackEvent('Portfolio', 'Click GitHub', name);
+                  window.open(sourceCodeLink, "_blank");
+                }}
                 className="black-gradient flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:scale-110 transition-transform"
               >
                 <img
@@ -163,10 +169,15 @@ const Works = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleViewDetails = (projectId: string) => {
+    const project = projects.find(p => p.id === projectId);
+    if (project) {
+      trackEvent('Portfolio', 'Click View Details', project.name);
+    }
     navigate(`/portfolio/${projectId}`);
   };
 
   const handleLoadMore = () => {
+    trackEvent('Portfolio', 'Load More', `${visibleProjects + 6} projects`);
     setIsLoading(true);
     // Simulate loading delay for better UX
     setTimeout(() => {

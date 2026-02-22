@@ -7,6 +7,7 @@ import { SectionWrapper } from "../../hoc";
 import { slideIn } from "../../utils/motion";
 import { config } from "../../constants/config";
 import { Header } from "../atoms/Header";
+import { trackEvent } from "../../utils/analytics";
 
 const INITIAL_STATE = Object.fromEntries(
   Object.keys(config.contact.form).map((input) => [input, ""])
@@ -53,6 +54,7 @@ const Contact = () => {
         () => {
           setLoading(false);
           alert("Thank you. I will get back to you as soon as possible.");
+          trackEvent('Contact', 'Form Submit', 'Success');
 
           setForm(INITIAL_STATE);
         },
@@ -61,6 +63,7 @@ const Contact = () => {
 
           console.log(error);
           alert("Something went wrong.");
+          trackEvent('Contact', 'Form Submit', 'Error');
         }
       );
   };

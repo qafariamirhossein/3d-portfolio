@@ -6,6 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import { blogApi } from '../../api/blogApi';
+import { trackEvent } from '../../utils/analytics';
 import 'highlight.js/styles/github-dark.css';
 
 // Interface that extends TransformedBlogPost for frontend compatibility
@@ -40,13 +41,18 @@ interface BlogListProps {
 }
 
 const BlogCard: React.FC<{ post: BlogPost; onPostClick: (slug: string) => void }> = ({ post, onPostClick }) => {
+  const handleClick = () => {
+    trackEvent('Blog', 'Click', post.title);
+    onPostClick(post.slug);
+  };
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className="bg-tertiary p-6 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 group cursor-pointer"
-      onClick={() => onPostClick(post.slug)}
+      onClick={handleClick}
     >
       <div className="relative overflow-hidden rounded-xl mb-4">
         <img
@@ -114,6 +120,19 @@ const BlogList: React.FC<BlogListProps> = ({ posts, onPostClick }) => {
     return matchesSearch && matchesCategory;
   });
 
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+    if (value) {
+      trackEvent('Blog', 'Search', value);
+    }
+  };
+
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    trackEvent('Blog', 'Filter Category', category);
+  };
+
   return (
     <div className="space-y-8">
       {/* Search and Filter */}
@@ -124,7 +143,7 @@ const BlogList: React.FC<BlogListProps> = ({ posts, onPostClick }) => {
             type="text"
             placeholder="Search blog posts..."
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={handleSearchChange}
             className="w-full pl-12 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-colors duration-300"
           />
         </div>
@@ -133,7 +152,7 @@ const BlogList: React.FC<BlogListProps> = ({ posts, onPostClick }) => {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setSelectedCategory(category)}
+              onClick={() => handleCategoryChange(category)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
                 selectedCategory === category
                   ? 'bg-primary text-white'
@@ -164,6 +183,9 @@ const BlogList: React.FC<BlogListProps> = ({ posts, onPostClick }) => {
 
 const BlogPost: React.FC<{ post: BlogPost; onBack: () => void }> = ({ post, onBack }) => {
   useEffect(() => {
+    // Track blog post view
+    trackEvent('Blog', 'View Post', post.title);
+    
     // Update page title and meta tags for SEO
     document.title = post.seo.metaTitle;
     
@@ -216,7 +238,10 @@ const BlogPost: React.FC<{ post: BlogPost; onBack: () => void }> = ({ post, onBa
     >
       {/* Back Button */}
       <button
-        onClick={onBack}
+        onClick={() => {
+          trackEvent('Blog', 'Back to List', post.title);
+          onBack();
+        }}
         className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300 mb-8"
       >
         <ArrowLeft className="w-5 h-5" />

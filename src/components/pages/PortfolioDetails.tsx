@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, ExternalLink, Github, Calendar, Users, Clock, Building } from 'lucide-react';
 import { projects } from '../../constants';
 import { TProject } from '../../types';
+import { trackEvent } from '../../utils/analytics';
 
 const PortfolioDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -16,6 +17,8 @@ const PortfolioDetails: React.FC = () => {
       const foundProject = projects.find(p => p.id === id);
       if (foundProject) {
         setProject(foundProject);
+        // Track portfolio project view
+        trackEvent('Portfolio', 'View Project', foundProject.name);
       } else {
         // Project not found, redirect to home
         navigate('/');
@@ -36,6 +39,9 @@ const PortfolioDetails: React.FC = () => {
   };
 
   const handleBackClick = () => {
+    if (project) {
+      trackEvent('Portfolio', 'Back to List', project.name);
+    }
     navigate(-1);
   };
 
@@ -258,6 +264,7 @@ const PortfolioDetails: React.FC = () => {
                   href={project.liveDemoLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackEvent('Portfolio', 'Click Live Demo', project.name)}
                   className="flex items-center space-x-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
                 >
                   <ExternalLink className="w-4 h-4" />
@@ -268,6 +275,7 @@ const PortfolioDetails: React.FC = () => {
                 href={project.sourceCodeLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackEvent('Portfolio', 'Click Source Code', project.name)}
                 className="flex items-center space-x-2 px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
               >
                 <Github className="w-4 h-4" />
