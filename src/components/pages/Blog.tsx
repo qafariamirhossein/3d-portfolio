@@ -463,6 +463,8 @@ const Blog: React.FC = () => {
       if (post) {
         setSelectedPost(post);
         setCurrentView('post');
+        // Scroll to top when navigating to a blog post
+        window.scrollTo(0, 0);
       }
     } else if (!slug) {
       // If no slug, show the blog list
@@ -486,6 +488,8 @@ const Blog: React.FC = () => {
       if (post) {
         setSelectedPost(post);
         setCurrentView('post');
+        // Scroll to top when navigating to a blog post via browser back/forward
+        window.scrollTo(0, 0);
       }
     }
   }, [location.pathname, posts]);
@@ -496,6 +500,8 @@ const Blog: React.FC = () => {
       setSelectedPost(post);
       setCurrentView('post');
       navigate(`/blog/${postSlug}`);
+      // Scroll to top when navigating to a blog post
+      window.scrollTo(0, 0);
     }
   };
 
