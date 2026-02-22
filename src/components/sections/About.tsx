@@ -54,7 +54,7 @@ const About = () => {
           className="flex-shrink-0"
         >
           <img
-            src="/me/me.png"
+            src="/me/amir-qafari.png"
             alt="Amir Qafari"
             className="w-48 h-48 lg:w-64 lg:h-64 rounded-full object-cover border-4 border-[#915EFF] shadow-lg"
           />

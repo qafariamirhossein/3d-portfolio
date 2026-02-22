@@ -199,9 +199,9 @@ class BlogApiService {
     //                    blogData.author?.attributes?.avatar?.data?.attributes?.url ||
     //                    blogData.author?.avatar?.data?.attributes?.url ||
     //                    blogData.author?.avatar?.url ||
-    //                    '/me.png';
+    //                    '/amir-qafari.png';
     
-    const authorImage = '/me.png';
+    const authorImage = 'me/amir-qafari.png';
     
     // Get author bio
     const authorBio = blogData.author?.data?.attributes?.bio || 
